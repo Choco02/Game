@@ -15,10 +15,13 @@ func _physics_process(delta):
 		
 		
 func _move(delta):
+	var sprite = get_node('Sprite') #Guarda node de sprite para usar metodos
 	motion.y += GRAVITY
 	if Input.is_action_pressed('ui_right'):
+		sprite.set_flip_h(false) #Inverte a posicao do sprite em X
 		motion.x = SPEED
 	elif Input.is_action_pressed('ui_left'):
+		sprite.set_flip_h(true) #Invente a posicao do sprite em X
 		motion.x = -SPEED
 	else:
 		motion.x = 0
