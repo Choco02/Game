@@ -1,0 +1,101 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://sprites/573bbe2afb7e13683406d103b02b0cf7--hand-painted-textures-d-texture.jpg" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32.2256, 32.2753 )
+
+[node name="main" type="Node" index="0"]
+
+[node name="player" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 500.437, 298.453 )
+
+[node name="chao" type="StaticBody2D" parent="." index="1"]
+
+editor/display_folded = true
+position = Vector2( 164, 576 )
+scale = Vector2( 5.40625, 0.613676 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Visibility" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chao" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="chao" index="1"]
+
+position = Vector2( 1.44429, 37.9935 )
+rotation = -5.0294e-005
+scale = Vector2( 0.286708, 0.691745 )
+texture = ExtResource( 2 )
+
+[node name="chao2" type="StaticBody2D" parent="." index="2"]
+
+editor/display_folded = true
+position = Vector2( 529, 576 )
+scale = Vector2( 5.40625, 0.613676 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Visibility" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chao2" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="chao2" index="1"]
+
+position = Vector2( 1.44429, 37.9935 )
+rotation = -5.0294e-005
+scale = Vector2( 0.286708, 0.691745 )
+texture = ExtResource( 2 )
+
+[node name="chao3" type="StaticBody2D" parent="." index="3"]
+
+editor/display_folded = true
+position = Vector2( 894, 576 )
+scale = Vector2( 5.40625, 0.613676 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Visibility" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chao3" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="chao3" index="1"]
+
+position = Vector2( 1.44429, 37.9935 )
+rotation = -5.0294e-005
+scale = Vector2( 0.286708, 0.691745 )
+texture = ExtResource( 2 )
+
+
