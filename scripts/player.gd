@@ -14,8 +14,8 @@ func _ready():
 
 func _physics_process(delta):
 	_move(delta)
-		
-		
+	pass
+	
 func _move(delta):
 	var sprite = get_node('Sprite') #Guarda node de sprite para usar metodos
 	motion.y += GRAVITY
@@ -33,14 +33,11 @@ func _move(delta):
 		
 		# verifica se o botão esquerdo do mouse está sendo clicado
 	if Input.is_action_pressed("mouse_click") :
-		
 		# pega a posição do mouse
 		var mouse_pos = get_viewport().get_mouse_position()
-		
-		
-		# gera um vetor unitário na direção 
-		mouse_pos = mouse_pos / mouse_pos.normalized()
-		
+		# gera um vetor unitário na direção certa
+		mouse_pos = mouse_pos.normalized()
+		print(mouse_pos)
 		var novo_tiro = tiro.instance(0)
 		novo_tiro.position = Vector2(500,500)
 		get_node("../").add_child(novo_tiro)
