@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+onready var tiro = preload("res://scenes/tiro.tscn")
+
 const SPEED = 300
 const GRAVITY = 30
 const JUMP_HEIGHT = -700
@@ -12,8 +14,8 @@ func _ready():
 
 func _physics_process(delta):
 	_move(delta)
-		
-		
+	pass
+	
 func _move(delta):
 	var sprite = get_node('Sprite') #Guarda node de sprite para usar metodos
 	motion.y += GRAVITY
@@ -28,4 +30,21 @@ func _move(delta):
 		
 	if Input.is_action_just_pressed('jump') and is_on_floor(): #jump foi uma tecla configura com valor space
 		motion.y = JUMP_HEIGHT
+		
+		# verifica se o botão esquerdo do mouse está sendo clicado
+	if Input.is_action_pressed("mouse_click") :
+		# pega a posição do mouse
+		var mouse_pos = get_viewport().get_mouse_position()
+		# gera um vetor unitário na direção certa
+		mouse_pos = mouse_pos.normalized()
+		print(m0ouse_pos)
+		var novo_tiro = tiro.instance()
+		get_parent().add_child(novo_tiro)
+		
+		novo_tiro.set_global_pos(get_node("arma").get_global_pos())
+		novo_tiro.set_linear_velocity (Vector2(1,0))
+		
+		
+		pass
+	
 	motion = move_and_slide(motion, NORMAL)
