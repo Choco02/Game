@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+var tiro = preload("res://scenes/tiro.tscn")
+
 const SPEED = 300
 const GRAVITY = 30
 const JUMP_HEIGHT = -700
@@ -35,6 +37,11 @@ func _move(delta):
 		# pega a posição do mouse
 		var mouse_pos = get_viewport().get_mouse_position()
 		print(mouse_pos)
+		
+		
+		mouse_pos = mouse_pos / mouse_pos.normalized()
+		
+		var novo_tiro = tiro.instance()
 		pass
 	
 	motion = move_and_slide(motion, NORMAL)
