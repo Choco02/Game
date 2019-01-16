@@ -28,4 +28,13 @@ func _move(delta):
 		
 	if Input.is_action_just_pressed('jump') and is_on_floor(): #jump foi uma tecla configura com valor space
 		motion.y = JUMP_HEIGHT
+		
+		# verifica se o botão esquerdo do mouse está sendo clicado
+	if Input.is_action_pressed("mouse_click") :
+		print("mouse clicado")
+		# pega a posição do mouse
+		var mouse_pos = get_viewport().get_mouse_position()
+		print(mouse_pos)
+		pass
+	
 	motion = move_and_slide(motion, NORMAL)

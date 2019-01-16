@@ -8,7 +8,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 32.2256, 32.2753 )
 
-[node name="main" type="Node"]
+[node name="main" type="Node" index="0"]
 
 [node name="player" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -97,5 +97,30 @@ position = Vector2( 1.44429, 37.9935 )
 rotation = -5.0294e-005
 scale = Vector2( 0.286708, 0.691745 )
 texture = ExtResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="." index="4"]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
 
 
