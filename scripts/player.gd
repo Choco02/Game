@@ -33,16 +33,17 @@ func _move(delta):
 		
 		# verifica se o botão esquerdo do mouse está sendo clicado
 	if Input.is_action_pressed("mouse_click") :
-		print("mouse clicado")
+		
 		# pega a posição do mouse
 		var mouse_pos = get_viewport().get_mouse_position()
-		print(mouse_pos)
+		
 		
 		# gera um vetor unitário na direção 
 		mouse_pos = mouse_pos / mouse_pos.normalized()
 		
-		var novo_tiro = tiro.instance()
-		add_child(novo_tiro)
+		var novo_tiro = tiro.instance(0)
+		novo_tiro.position = Vector2(500,500)
+		get_node("../").add_child(novo_tiro)
 		
 		pass
 	
