@@ -38,10 +38,12 @@ func _move(delta):
 		var mouse_pos = get_viewport().get_mouse_position()
 		print(mouse_pos)
 		
-		
+		# gera um vetor unitário na direção 
 		mouse_pos = mouse_pos / mouse_pos.normalized()
 		
 		var novo_tiro = tiro.instance()
+		novo_tiro.set_global_pos(get_node("player/arma").get_global_position())
+		get_node("res://scenes/main").add_child(novo_tiro)
 		pass
 	
 	motion = move_and_slide(motion, NORMAL)
