@@ -37,14 +37,17 @@ func _move(delta):
 		var mouse_pos = get_viewport().get_mouse_position()
 		# gera um vetor unitário na direção certa
 		mouse_pos = mouse_pos.normalized()
-		print(m0ouse_pos)
+		print(mouse_pos)
 		var novo_tiro = tiro.instance()
-		get_parent().add_child(novo_tiro)
+		get_parent().add_child(novo_tiro) #printando pos inicial de novo_tiro
+		print(novo_tiro.get_global_position())
+		#metodos "set_global_pos" agora é "set_global_position,
+		#o mesmo para "get_global_position"
+		novo_tiro.set_global_position(get_node("arma").get_global_position())
+		print(novo_tiro.get_global_position()) #printando nova posicao
+		#novo_tiro.set_linear_velocity(Vector2(1,0)) 
+		#metodo "set_linear_velocity" nao encontrado, talvez nao exista mais nessa versao
 		
-		novo_tiro.set_global_pos(get_node("arma").get_global_pos())
-		novo_tiro.set_linear_velocity (Vector2(1,0))
 		
-		
-		pass
 	
 	motion = move_and_slide(motion, NORMAL)
