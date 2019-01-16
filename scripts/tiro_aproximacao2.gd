@@ -6,10 +6,8 @@ var start_speed = 500
 var motion = Vector2()
 var angle
 
-func _ready(angulo):
-	angle = angulo
-	motion.y = start_speed * sin(angle)
-	motion.x = start_speed * sin(angle)
+func _ready():
+	motion.x = start_speed 
 	print("entrou no tiro")
 	pass
 

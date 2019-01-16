@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var tiro = preload("res://scenes/tiro.tscn")
+onready var tiro = preload("res://scenes/tiro.tscn")
 
 const SPEED = 300
 const GRAVITY = 30
@@ -37,10 +37,13 @@ func _move(delta):
 		var mouse_pos = get_viewport().get_mouse_position()
 		# gera um vetor unitário na direção certa
 		mouse_pos = mouse_pos.normalized()
-		print(mouse_pos)
-		var novo_tiro = tiro.instance(0)
-		novo_tiro.position = Vector2(500,500)
-		get_node("../").add_child(novo_tiro)
+		print(m0ouse_pos)
+		var novo_tiro = tiro.instance()
+		get_parent().add_child(novo_tiro)
+		
+		novo_tiro.set_global_pos(get_node("arma").get_global_pos())
+		novo_tiro.set_linear_velocity (Vector2(1,0))
+		
 		
 		pass
 	
