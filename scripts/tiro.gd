@@ -3,7 +3,7 @@ extends Node2D
 
 var direcao_inicial
 var velocidade_atual
-var start_speed = 200 #velocidade estava muito rapida, por isso nao aparecia na tela
+var start_speed = 20 #velocidade estava muito rapida, por isso nao aparecia na tela
 #antes era velocidade 2000, mudada para 200
 
 
