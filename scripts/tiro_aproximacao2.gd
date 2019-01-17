@@ -17,8 +17,6 @@ func _physics_process(delta):
 	
 func _move(delta):
 	motion.y += GRAVITY
-	
 	motion = move_and_slide(motion, NORMAL)
 	pass
-
 
