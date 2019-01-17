@@ -35,7 +35,7 @@ func _move(delta):
 		# verifica se o botão esquerdo do mouse está sendo clicado
 	if Input.is_action_pressed("mouse_click") :
 		# pega a posição do mouse
-		var mouse_pos = get_viewport().get_mouse_position()
+		var mouse_pos = get_global_mouse_position()
 		# pega a posição do jogador 
 		var player_pos = get_node("arma").get_global_position()
 		
