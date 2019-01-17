@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sprites/573bbe2afb7e13683406d103b02b0cf7--hand-painted-textures-d-texture.jpg" type="Texture" id=2]
-[ext_resource path="res://scenes/tiro_aproximacao2.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -14,7 +13,7 @@ extents = Vector2( 32.2256, 32.2753 )
 custom_solver_bias = 0.0
 extents = Vector2( 17.8377, 50.4392 )
 
-[node name="main" type="Node"]
+[node name="main" type="Node" index="0"]
 
 [node name="player" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -24,6 +23,32 @@ position = Vector2( 514.404, 301.393 )
 
 position = Vector2( -5.14563, 12.4966 )
 _sections_unfolded = [ "Z Index" ]
+
+[node name="Camera2D" type="Camera2D" parent="player" index="3"]
+
+offset = Vector2( 0, -150 )
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
 
 [node name="chao" type="StaticBody2D" parent="." index="1"]
 
@@ -109,36 +134,7 @@ rotation = -5.0294e-005
 scale = Vector2( 0.286708, 0.691745 )
 texture = ExtResource( 2 )
 
-[node name="Camera2D" type="Camera2D" parent="." index="4"]
-
-anchor_mode = 1
-rotating = false
-current = false
-zoom = Vector2( 1, 1 )
-limit_left = -10000001
-limit_top = -10000000
-limit_right = 10000000
-limit_bottom = 10000000
-limit_smoothed = false
-drag_margin_h_enabled = true
-drag_margin_v_enabled = true
-smoothing_enabled = false
-smoothing_speed = 5.0
-offset_v = 0.0
-offset_h = 0.0
-drag_margin_left = 0.2
-drag_margin_top = 0.2
-drag_margin_right = 0.2
-drag_margin_bottom = 0.2
-editor_draw_screen = true
-editor_draw_limits = false
-editor_draw_drag_margin = false
-
-[node name="tiro" parent="." index="5" instance=ExtResource( 3 )]
-
-position = Vector2( 307.498, 85.9186 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="." index="6"]
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="4"]
 
 position = Vector2( -9.88551, 477.062 )
 scale = Vector2( 0.474197, 2.29126 )
