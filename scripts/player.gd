@@ -47,12 +47,12 @@ func _move(delta):
 		vetor_vel_inicial = vetor_vel_inicial.normalized()
 		if tempo_de_recarga <= 0:
 			var novo_tiro = tiro.instance()
+			novo_tiro.direcao_inicial = vetor_vel_inicial
 			get_parent().add_child(novo_tiro) #printando pos inicial de novo_tiro
 			#metodos "set_global_pos" agora é "set_global_position,
 			#o mesmo para "get_global_position"
 			novo_tiro.set_global_position(get_node("arma").get_global_position())
-			print(vetor_vel_inicial)
-			novo_tiro.direcao_inicial = vetor_vel_inicial
+			
 			#novo_tiro.set_linear_velocity(Vector2(1,0)) 
 			#metodo "set_linear_velocity" nao encontrado, talvez nao exista mais nessa versao
 			tempo_de_recarga = 0.5

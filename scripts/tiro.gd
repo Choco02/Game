@@ -4,7 +4,7 @@ var GRAVITY = 30
 var direcao_inicial = Vector2()
 var velocidade_atualX = 0	# tava dando erro quando eu usava Vector2
 var velocidade_atualY = 0   # então eu separei em duas variáveis 
-var start_speed = 500 #velocidade estava muito rapida, por isso nao aparecia na tela
+var start_speed = 1250 #velocidade estava muito rapida, por isso nao aparecia na tela
 #antes era velocidade 2000, mudada para 200
 
 
@@ -22,6 +22,7 @@ func _process(delta):
 	pass
 
 func set_vel(direc, speed):
-	velocidade_atualX = 1 * start_speed
-	velocidade_atualY = (-1) * 2 * start_speed
+	print(direc)
+	velocidade_atualX = direc.x * start_speed
+	velocidade_atualY = direc.y * start_speed
 	pass
