@@ -36,16 +36,23 @@ func _move(delta):
 	if Input.is_action_pressed("mouse_click") :
 		# pega a posição do mouse
 		var mouse_pos = get_viewport().get_mouse_position()
+		# pega a posição do jogador 
+		var player_pos = get_node("arma").get_global_position()
+		
+		# o vetor velocidade inicial tem a direção igual ao valor 
+		# a subtração vetorial da posição do mouse menos a posição
+		# do jogador. só um pouco de álgebra vetorial 
+		var vetor_vel_inicial = mouse_pos - player_pos 
 		# gera um vetor unitário na direção certa
-		mouse_pos = mouse_pos.normalized()
+		vetor_vel_inicial = vetor_vel_inicial.normalized()
 		if tempo_de_recarga <= 0:
 			var novo_tiro = tiro.instance()
 			get_parent().add_child(novo_tiro) #printando pos inicial de novo_tiro
-			print(novo_tiro.get_global_position())
 			#metodos "set_global_pos" agora é "set_global_position,
 			#o mesmo para "get_global_position"
 			novo_tiro.set_global_position(get_node("arma").get_global_position())
-			print(novo_tiro.get_global_position()) #printando nova posicao
+			print(vetor_vel_inicial)
+			novo_tiro.direcao_inicial = vetor_vel_inicial
 			#novo_tiro.set_linear_velocity(Vector2(1,0)) 
 			#metodo "set_linear_velocity" nao encontrado, talvez nao exista mais nessa versao
 			tempo_de_recarga = 0.5
