@@ -2,6 +2,8 @@ extends KinematicBody2D
 
 onready var tiro = preload("res://scenes/tiro.tscn")
 
+var hp = 1
+
 const SPEED = 300
 const GRAVITY = 30
 const JUMP_HEIGHT = -700
@@ -10,7 +12,7 @@ var motion = Vector2() #var que modifica pos X e Y
 var tempo_de_recarga = 0.5
 
 func _ready():
-
+	add_to_group(metadados.GRUPO_PLAYER)
 	pass
 
 func _physics_process(delta):
@@ -62,3 +64,10 @@ func _move(delta):
 		
 	
 	motion = move_and_slide(motion, NORMAL)
+	
+	# essa fção é chamada quando o jogador toca esse inimigo 
+func dano_ao_player(dano_do_inimigo):
+	hp -= dano_do_inimigo
+	if hp <= 0 :
+		queue_free()
+	pass
