@@ -33,7 +33,9 @@ func damage(dano):
 	pass
 
 # a função abaixo é chamada quando ele atinge o player
-func _on_Area2D_body_entered(body):
-	if body.is_in_group(metadados.GRUPO_PLAYER):
-		body.dano_ao_player(dano_do_inimigo)
-	pass 
+#FUNCAO DESATIVADA TEMPORARIA, INIMIGO SENDO ATRAIDO PELO PLAYER
+#INIMIGO ANDANDO MUITO MAIS RAPIDO QUE O PLAYER
+#func _on_Area2D_body_entered(body):
+#	if body.is_in_group(metadados.GRUPO_PLAYER):
+#		body.dano_ao_player(dano_do_inimigo)
+#	pass 
