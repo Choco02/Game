@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sprites/573bbe2afb7e13683406d103b02b0cf7--hand-painted-textures-d-texture.jpg" type="Texture" id=2]
+[ext_resource path="res://scenes/inimigo.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -81,7 +82,7 @@ texture = ExtResource( 2 )
 [node name="chao2" type="StaticBody2D" parent="." index="2"]
 
 editor/display_folded = true
-position = Vector2( 529, 576 )
+position = Vector2( 529, 578.272 )
 scale = Vector2( 5.40625, 0.613676 )
 input_pickable = false
 collision_layer = 1
@@ -152,5 +153,9 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
 
 shape = SubResource( 2 )
+
+[node name="ininimigo1" parent="." index="5" instance=ExtResource( 3 )]
+
+position = Vector2( 183.447, 124.136 )
 
 

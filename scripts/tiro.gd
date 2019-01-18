@@ -1,5 +1,9 @@
 extends Node2D
 
+signal hit_em_algo
+
+var dano = 1
+
 var GRAVITY = 30
 var direcao_inicial = Vector2()
 var velocidade_atualX = 0	# tava dando erro quando eu usava Vector2
@@ -26,3 +30,12 @@ func set_vel(direc, speed):
 	velocidade_atualX = direc.x * start_speed
 	velocidade_atualY = direc.y * start_speed
 	pass
+
+# caso sua area2D detecte a entrada de algum elemento que possua física 
+# esta função é chamada 
+func _on_Area2D_body_entered(body):
+	if body.is_in_group(metadados.GRUPO_INIMIGO):
+		body.damage(dano)
+		queue_free()
+		pass
+	pass 
