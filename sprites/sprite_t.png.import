@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/faca.png-bcb738f8f02b21eb0bab58cd647f2cfb.stex"
+path="res://.import/sprite_t.png-4651f562d51f64025b1f7c4506881715.stex"
 
 [deps]
 
-source_file="res://sprites/faca.png"
-dest_files=[ "res://.import/faca.png-bcb738f8f02b21eb0bab58cd647f2cfb.stex" ]
+source_file="res://sprites/sprite_t.png"
+dest_files=[ "res://.import/sprite_t.png-4651f562d51f64025b1f7c4506881715.stex" ]
 
 [params]
 
@@ -16,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
