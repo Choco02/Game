@@ -16,11 +16,15 @@ func _physics_process(delta):
 	
 	pass
 
+
+# foi adicionado dano para qundo cair 
 func normal(delta):
 	motion.y += GRAVITY
 	#print(motion.y)
 	motion.x = andar
-	var sprite = get_node('Sprite')
+	#var sprite = get_node('Sprite')
+	if get_node('pos').global_position.y > 2000 :
+		damage(10)
 	motion = move_and_slide(motion)
 	
 #inimigo esperando movimentacao

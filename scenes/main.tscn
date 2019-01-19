@@ -15,7 +15,7 @@ extents = Vector2( 32.2256, 32.2753 )
 custom_solver_bias = 0.0
 extents = Vector2( 17.8377, 50.4392 )
 
-[node name="main" type="Node" index="0"]
+[node name="main" type="Node"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." index="0"]
 
@@ -93,7 +93,7 @@ scale = Vector2( 2.96038, 2.8133 )
 [node name="chao" type="StaticBody2D" parent="." index="2"]
 
 editor/display_folded = true
-position = Vector2( 164, 576 )
+position = Vector2( 164, 578.216 )
 scale = Vector2( 5.40625, 0.613676 )
 input_pickable = false
 collision_layer = 1
@@ -149,7 +149,7 @@ texture = ExtResource( 4 )
 [node name="chao3" type="StaticBody2D" parent="." index="4"]
 
 editor/display_folded = true
-position = Vector2( 894, 576 )
+position = Vector2( 895.108, 578.216 )
 scale = Vector2( 5.40625, 0.613676 )
 input_pickable = false
 collision_layer = 1

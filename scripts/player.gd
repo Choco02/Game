@@ -62,7 +62,8 @@ func _move(delta):
 		if tempo_de_recarga > 0 :
 			tempo_de_recarga -= delta
 		
-	
+	if get_node('arma').get_global_position().y > 2000 :
+		dano_ao_player(10) 
 	motion = move_and_slide(motion, NORMAL)
 	
 	# essa fção é chamada quando o jogador toca esse inimigo 
