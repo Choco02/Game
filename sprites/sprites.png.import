@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/faca.png-bcb738f8f02b21eb0bab58cd647f2cfb.stex"
+path="res://.import/sprites.png-6400cb1186e3521f833030ecfd34f068.stex"
 
 [deps]
 
-source_file="res://sprites/faca.png"
-dest_files=[ "res://.import/faca.png-bcb738f8f02b21eb0bab58cd647f2cfb.stex" ]
+source_file="res://sprites/sprites.png"
+dest_files=[ "res://.import/sprites.png-6400cb1186e3521f833030ecfd34f068.stex" ]
 
 [params]
 
