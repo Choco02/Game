@@ -5,8 +5,8 @@ onready var tiro = preload("res://scenes/tiro.tscn")
 var hp = 1
 
 const SPEED = 300
-const GRAVITY = 30
-const JUMP_HEIGHT = -700
+const GRAVITY = 27
+const JUMP_HEIGHT = -750
 const NORMAL = Vector2(0, -1)
 var motion = Vector2() #var que modifica pos X e Y
 var tempo_de_recarga = 0.5

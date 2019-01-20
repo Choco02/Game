@@ -7,7 +7,7 @@
 [ext_resource path="res://sprites do tile set/chao_meio_abaixo.png" type="Texture" id=5]
 [ext_resource path="res://sprites do tile set/rampa_descendente.png" type="Texture" id=6]
 
-[node name="Node" type="Node" index="0"]
+[node name="Node" type="Node"]
 
 [node name="chao_topo" type="Sprite" parent="." index="0"]
 
