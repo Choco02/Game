@@ -9,7 +9,7 @@
 [ext_resource path="res://sprites do tile set/rampa_ascendente.png" type="Texture" id=7]
 [ext_resource path="res://sprites do tile set/chao_topo_meio.png" type="Texture" id=8]
 
-[node name="main" type="Node"]
+[node name="main" type="Node" index="0"]
 
 [node name="player" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -50,7 +50,6 @@ editor_draw_drag_margin = false
 [node name="ininimigo1" parent="." index="1" instance=ExtResource( 2 )]
 
 position = Vector2( 183.447, 129.715 )
-scale = Vector2( 2.94294, 2.94294 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." index="2"]
 
@@ -104,12 +103,17 @@ texture = ExtResource( 3 )
 
 [node name="Sprite6" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="6"]
 
-position = Vector2( 5122.9, 298.307 )
+position = Vector2( 5121.9, 298.307 )
 texture = ExtResource( 3 )
 
 [node name="Sprite3" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="7"]
 
-position = Vector2( 5123.1, -261.068 )
+position = Vector2( 5122.1, -261.068 )
+texture = ExtResource( 3 )
+
+[node name="Sprite9" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="8"]
+
+position = Vector2( 5122.1, -479.068 )
 texture = ExtResource( 3 )
 
 [node name="cenário" type="Node" parent="." index="3"]

@@ -2,6 +2,8 @@ extends KinematicBody2D
 
 onready var tiro = preload("res://scenes/tiro.tscn")
 
+signal dead(morto)
+
 var hp = 1
 
 const SPEED = 300
@@ -10,6 +12,7 @@ const JUMP_HEIGHT = -750
 const NORMAL = Vector2(0, -1)
 var motion = Vector2() #var que modifica pos X e Y
 var tempo_de_recarga = 0.5
+
 
 func _ready():
 	add_to_group(metadados.GRUPO_PLAYER)
@@ -70,5 +73,6 @@ func _move(delta):
 func dano_ao_player(dano_do_inimigo):
 	hp -= dano_do_inimigo
 	if hp <= 0 :
+		emit_signal("dead", true)
 		queue_free()
 	pass

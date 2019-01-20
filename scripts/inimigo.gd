@@ -6,14 +6,17 @@ var motion = Vector2()
 var andar = 100
 var ativado = 0
 var direcao = 1 
-
+var vivencia_player = true
 var hp = 1
 var dano_do_inimigo = 1
 
+func player_vivo(existencia):
+	vivencia_player = false
+	pass
 
 # verifica a proximidade e direção do jogador
 func player_perto():
-	var sprite_ini = get_node('skin_do_inimigo')
+	var sprite_ini = get_node('skin_do_inimigo') 
 	var distancia = (get_global_position() - get_node("../player").get_global_position()).length()
 	if distancia < DISTANCIA:
 		ativado = 1
@@ -28,11 +31,13 @@ func player_perto():
 
 	
 func _ready():
+	get_node("../player").connect("dead", self,"player_vivo")
 	add_to_group(metadados.GRUPO_INIMIGO)
 	pass
 
 func _physics_process(delta):
-	mover(delta)
+	if vivencia_player :
+		mover(delta)
 	
 	pass
 
@@ -60,7 +65,7 @@ func damage(dano):
 # a função abaixo é chamada quando ele atinge o player
 #FUNCAO DESATIVADA TEMPORARIA, INIMIGO SENDO ATRAIDO PELO PLAYER
 #INIMIGO ANDANDO MUITO MAIS RAPIDO QUE O PLAYER
-#func _on_Area2D_body_entered(body):
-#	if body.is_in_group(metadados.GRUPO_PLAYER):
-#		body.dano_ao_player(dano_do_inimigo)
-#	pass 
+func _on_Area2D_body_entered(body):
+	if body.is_in_group(metadados.GRUPO_PLAYER):
+		body.dano_ao_player(dano_do_inimigo)
+	pass 
