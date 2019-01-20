@@ -4,6 +4,7 @@ signal hit_em_algo
 
 var dano = 1
 
+var tempo_dentro = 0.3
 var GRAVITY = 30
 var direcao_inicial = Vector2()
 var velocidade_atualX = 0	# tava dando erro quando eu usava Vector2

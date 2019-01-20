@@ -25,7 +25,7 @@ __meta__ = {
 
 shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="." index="1"]
+[node name="skin_do_inimigo" type="Sprite" parent="." index="1"]
 
 texture = ExtResource( 2 )
 

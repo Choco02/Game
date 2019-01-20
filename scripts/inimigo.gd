@@ -1,32 +1,53 @@
 extends KinematicBody2D
 
 const GRAVITY = 100
+const DISTANCIA = 200
 var motion = Vector2()
 var andar = 100
+var ativado = 0
+var direcao = 1 
 
 var hp = 1
 var dano_do_inimigo = 1
 
+
+# verifica a proximidade e direção do jogador
+func player_perto():
+	var sprite_ini = get_node('skin_do_inimigo')
+	var distancia = (get_global_position() - get_node("../player").get_global_position()).length()
+	if distancia < DISTANCIA:
+		ativado = 1
+		if get_global_position().x - get_node("../player").get_global_position().x < 0 : 
+			direcao = 1 
+			sprite_ini.set_flip_h(false)
+		else:
+			direcao = -1
+			sprite_ini.set_flip_h(true)
+	else:
+		ativado = 0
+
+	
 func _ready():
 	add_to_group(metadados.GRUPO_INIMIGO)
 	pass
 
 func _physics_process(delta):
-	normal(delta)
+	mover(delta)
 	
 	pass
 
 
 # foi adicionado dano para qundo cair 
-func normal(delta):
-	motion.y += GRAVITY
-	#print(motion.y)
-	motion.x = andar
-	#var sprite = get_node('Sprite')
+func mover(delta):
+	player_perto()
+	if ativado == 1:
+		motion.y += GRAVITY
+		#print(motion.y)
+		motion.x = andar * direcao
+		motion = move_and_slide(motion)
+		pass
 	if get_node('pos').global_position.y > 2000 :
 		damage(10)
-	motion = move_and_slide(motion)
-	
 #inimigo esperando movimentacao
 
 # a função abaixo é chamada caso ele for atingindo por um tiro 
