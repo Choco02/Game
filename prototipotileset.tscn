@@ -1,0 +1,148 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://sprites do tile set/chao_topo.png" type="Texture" id=1]
+[ext_resource path="res://sprites do tile set/rampa_ascendente.png" type="Texture" id=2]
+[ext_resource path="res://sprites do tile set/chao_topo_esquerda.png" type="Texture" id=3]
+[ext_resource path="res://sprites do tile set/chao_topo_meio.png" type="Texture" id=4]
+[ext_resource path="res://sprites do tile set/chao_meio_abaixo.png" type="Texture" id=5]
+[ext_resource path="res://sprites do tile set/rampa_descendente.png" type="Texture" id=6]
+
+[node name="Node" type="Node" index="0"]
+
+[node name="chao_topo" type="Sprite" parent="." index="0"]
+
+editor/display_folded = true
+position = Vector2( 24.8032, 20 )
+scale = Vector2( 0.393701, 0.363636 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Offset" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="chao_topo" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="chao_topo/StaticBody2D" index="0"]
+
+position = Vector2( 0.499996, 0 )
+build_mode = 0
+polygon = PoolVector2Array( -63, -55, 64, -55, 64, 55, -63, 55 )
+
+[node name="rampa_ascendente" type="Sprite" parent="." index="1"]
+
+editor/display_folded = true
+position = Vector2( 124.105, 16.5 )
+scale = Vector2( 0.395821, 0.361538 )
+texture = ExtResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="rampa_ascendente" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="rampa_ascendente/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -65.212, 56.7023, -65.212, 42.8725, 59.5414, -53.9362, 59.5414, 56.7023 )
+
+[node name="chao_topo_esquerda" type="Sprite" parent="." index="2"]
+
+editor/display_folded = true
+position = Vector2( 20, 112.313 )
+scale = Vector2( 0.342857, 0.370833 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Offset" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="chao_topo_esquerda" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="chao_topo_esquerda/StaticBody2D" index="0"]
+
+position = Vector2( 4.57764e-005, 0 )
+build_mode = 0
+polygon = PoolVector2Array( -64.1668, -38.5955, -64.1668, 39.6068, 64.1666, 39.6068, 64.1666, -38.5955 )
+
+[node name="chao_topo_meio" type="Sprite" parent="." index="3"]
+
+editor/display_folded = true
+position = Vector2( 120, 112.404 )
+scale = Vector2( 0.338028, 0.374379 )
+texture = ExtResource( 4 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="chao_topo_meio" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="chao_topo_meio/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -65.0834, -38.475, -65.0834, 38.9867, 65.0833, 38.9867, 65.0833, -38.475 )
+
+[node name="chao_meio_abaixo" type="Sprite" parent="." index="4"]
+
+editor/display_folded = true
+position = Vector2( 22, 215 )
+scale = Vector2( 0.391724, 0.368488 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="chao_meio_abaixo" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="chao_meio_abaixo/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -63.8205, -46.1345, -63.8205, 46.1345, 63.8203, 46.1345, 63.8203, -46.1345 )
+
+[node name="rampa_descendente" type="Sprite" parent="." index="5"]
+
+editor/display_folded = true
+position = Vector2( 220, 16 )
+scale = Vector2( 0.394366, 0.363636 )
+texture = ExtResource( 6 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="rampa_descendente" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="rampa_descendente/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -59.5829, -55, -59.5829, 55, 66.005, 55, 66.005, 38.5 )
+
+
