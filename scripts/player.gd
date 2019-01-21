@@ -12,7 +12,7 @@ const JUMP_HEIGHT = -750
 const NORMAL = Vector2(0, -1)
 var motion = Vector2() #var que modifica pos X e Y
 var tempo_de_recarga = 0.5
-var anim = "" #var que vai guardar animacao do player
+onready var anim = get_node("anim") #var que vai guardar animacao do player
 
 func _ready():
 	add_to_group(metadados.GRUPO_PLAYER)
@@ -26,16 +26,18 @@ func _move(delta):
 	var sprite = get_node('Sprite') #Guarda node de sprite para usar metodos
 	motion.y += GRAVITY
 	if Input.is_action_pressed('right'):
-		anim = get_node("anim").play("walking_player")
+		anim.play("walking_player")
 		sprite.set_flip_h(false) #Inverte a posicao do sprite em X
 		motion.x = SPEED
 	elif Input.is_action_pressed('left'):
-		anim = get_node("anim").play("walking_player")
+		#anim.play("walking_player") #So se usa play uma vez para a mesma animacao, se usar uma segunda vez animacao para
+		#a solucao e verificar se a animacao walking esta executando quando tecla e pressionado (dentro dos if)
+		#se nao estiver sendo pressionada nenhuma tecla, rodar a animacao "idle"
 		sprite.set_flip_h(true) #Invente a posicao do sprite em X
 		motion.x = -SPEED
 	else:
 		motion.x = 0
-		#anim = get_node("anim").play("walking") #aqui vai ficar animacao de IDLE/parado
+		anim.play("idle") #aqui vai ficar animacao de IDLE/parado
 		
 		
 	if Input.is_action_just_pressed('jump') and is_on_floor(): #jump foi uma tecla configura com valor space
