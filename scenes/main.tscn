@@ -1,0 +1,1342 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/inimigo.tscn" type="PackedScene" id=2]
+[ext_resource path="res://sprites/level_1_level_2.png" type="Texture" id=3]
+[ext_resource path="res://sprites do tile set/chao_topo.png" type="Texture" id=4]
+[ext_resource path="res://sprites do tile set/rampa_descendente.png" type="Texture" id=5]
+[ext_resource path="res://sprites do tile set/chao_meio_abaixo.png" type="Texture" id=6]
+[ext_resource path="res://sprites do tile set/rampa_ascendente.png" type="Texture" id=7]
+[ext_resource path="res://sprites do tile set/chao_topo_meio.png" type="Texture" id=8]
+[ext_resource path="res://sounds/stage_1_music.ogg" type="AudioStream" id=9]
+
+[node name="main" type="Node" index="0"]
+
+[node name="player" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 514.404, 306.972 )
+
+[node name="arma" type="Position2D" parent="player" index="2"]
+
+position = Vector2( -5.14563, 12.4966 )
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Camera2D" type="Camera2D" parent="player" index="3"]
+
+position = Vector2( 0, 24.8547 )
+offset = Vector2( 0, -130 )
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+
+[node name="ininimigo1" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 183.447, 129.715 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="2"]
+
+editor/display_folded = true
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+scroll_offset = Vector2( 0, 0 )
+scroll_base_offset = Vector2( 0, 0 )
+scroll_base_scale = Vector2( 1, 1 )
+scroll_limit_begin = Vector2( 0, 0 )
+scroll_limit_end = Vector2( 0, 0 )
+scroll_ignore_camera_zoom = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" index="0"]
+
+motion_scale = Vector2( 1, 1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 0, 0 )
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
+
+position = Vector2( 5121.82, 865.128 )
+texture = ExtResource( 3 )
+
+[node name="Sprite4" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="1"]
+
+position = Vector2( 3990.93, 303.334 )
+texture = ExtResource( 3 )
+
+[node name="Sprite7" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="2"]
+
+position = Vector2( 12741.3, 296.697 )
+texture = ExtResource( 3 )
+
+[node name="Sprite8" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="3"]
+
+position = Vector2( 12742.5, -255.232 )
+texture = ExtResource( 3 )
+
+[node name="Sprite5" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="4"]
+
+position = Vector2( 3990.65, -260.053 )
+texture = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="5"]
+
+position = Vector2( 5126.9, 298.307 )
+texture = ExtResource( 3 )
+
+[node name="Sprite6" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="6"]
+
+position = Vector2( 5121.9, 298.307 )
+texture = ExtResource( 3 )
+
+[node name="Sprite3" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="7"]
+
+position = Vector2( 5122.1, -261.068 )
+texture = ExtResource( 3 )
+
+[node name="Sprite9" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="8"]
+
+position = Vector2( 5122.1, -479.068 )
+texture = ExtResource( 3 )
+
+[node name="cenário" type="Node" parent="." index="3"]
+
+editor/display_folded = true
+
+[node name="chao_topo" type="Sprite" parent="cenário" index="0"]
+
+position = Vector2( 60.5615, 410.071 )
+texture = ExtResource( 4 )
+
+[node name="chao_topo5" type="Sprite" parent="cenário" index="1"]
+
+position = Vector2( 10181.2, 654.38 )
+texture = ExtResource( 4 )
+
+[node name="chao_topo6" type="Sprite" parent="cenário" index="2"]
+
+position = Vector2( 10053.8, 654.38 )
+texture = ExtResource( 4 )
+
+[node name="chao_topo7" type="Sprite" parent="cenário" index="3"]
+
+position = Vector2( 9928.36, 654.38 )
+texture = ExtResource( 4 )
+
+[node name="chao_topo8" type="Sprite" parent="cenário" index="4"]
+
+position = Vector2( 9801.73, 654.38 )
+texture = ExtResource( 4 )
+
+[node name="chao_topo9" type="Sprite" parent="cenário" index="5"]
+
+position = Vector2( 9674.54, 654.681 )
+texture = ExtResource( 4 )
+
+[node name="chao_topo10" type="Sprite" parent="cenário" index="6"]
+
+position = Vector2( 9548.32, 654.582 )
+texture = ExtResource( 4 )
+
+[node name="chao_topo11" type="Sprite" parent="cenário" index="7"]
+
+position = Vector2( 9296.62, 562.582 )
+texture = ExtResource( 4 )
+
+[node name="chao_topo12" type="Sprite" parent="cenário" index="8"]
+
+position = Vector2( 9169.73, 561.888 )
+texture = ExtResource( 4 )
+
+[node name="chao_topo13" type="Sprite" parent="cenário" index="9"]
+
+position = Vector2( 9042.63, 561.888 )
+texture = ExtResource( 4 )
+
+[node name="chao_topo14" type="Sprite" parent="cenário" index="10"]
+
+position = Vector2( 8916.63, 561.888 )
+texture = ExtResource( 4 )
+
+[node name="chao_topo15" type="Sprite" parent="cenário" index="11"]
+
+position = Vector2( 8790.63, 561.888 )
+texture = ExtResource( 4 )
+
+[node name="chao_topo16" type="Sprite" parent="cenário" index="12"]
+
+position = Vector2( 8663.63, 561.888 )
+texture = ExtResource( 4 )
+
+[node name="chao_topo17" type="Sprite" parent="cenário" index="13"]
+
+position = Vector2( 8536.63, 561.888 )
+texture = ExtResource( 4 )
+
+[node name="chao_topo18" type="Sprite" parent="cenário" index="14"]
+
+position = Vector2( 8409.63, 561.888 )
+texture = ExtResource( 4 )
+
+[node name="chao_topo19" type="Sprite" parent="cenário" index="15"]
+
+position = Vector2( 8282.63, 561.888 )
+texture = ExtResource( 4 )
+
+[node name="chao_topo20" type="Sprite" parent="cenário" index="16"]
+
+position = Vector2( 8155.63, 561.888 )
+texture = ExtResource( 4 )
+
+[node name="chao_topo21" type="Sprite" parent="cenário" index="17"]
+
+position = Vector2( 8028.63, 561.888 )
+texture = ExtResource( 4 )
+
+[node name="chao_topo22" type="Sprite" parent="cenário" index="18"]
+
+position = Vector2( 7901.63, 561.888 )
+texture = ExtResource( 4 )
+
+[node name="chao_topo23" type="Sprite" parent="cenário" index="19"]
+
+position = Vector2( 7651.63, 654.888 )
+texture = ExtResource( 4 )
+
+[node name="chao_topo2" type="Sprite" parent="cenário" index="20"]
+
+position = Vector2( 563.074, 505.28 )
+texture = ExtResource( 4 )
+
+[node name="chao_topo24" type="Sprite" parent="cenário" index="21"]
+
+position = Vector2( 690.074, 505.28 )
+texture = ExtResource( 4 )
+
+[node name="chao_topo25" type="Sprite" parent="cenário" index="22"]
+
+position = Vector2( 817.074, 505.28 )
+texture = ExtResource( 4 )
+
+[node name="chao_topo26" type="Sprite" parent="cenário" index="23"]
+
+position = Vector2( 944.074, 505.28 )
+texture = ExtResource( 4 )
+
+[node name="chao_topo27" type="Sprite" parent="cenário" index="24"]
+
+position = Vector2( 1071.07, 505.28 )
+texture = ExtResource( 4 )
+
+[node name="chao_topo3" type="Sprite" parent="cenário" index="25"]
+
+position = Vector2( 438.437, 505.383 )
+texture = ExtResource( 4 )
+
+[node name="chao_topo4" type="Sprite" parent="cenário" index="26"]
+
+position = Vector2( 187.183, 410.375 )
+texture = ExtResource( 4 )
+
+[node name="rampa_descendente" type="Sprite" parent="cenário" index="27"]
+
+position = Vector2( 309.592, 410.096 )
+scale = Vector2( 1, 1.01383 )
+texture = ExtResource( 5 )
+
+[node name="rampa_descendente2" type="Sprite" parent="cenário" index="28"]
+
+position = Vector2( 9419.07, 560.959 )
+scale = Vector2( 1, 1.01383 )
+texture = ExtResource( 5 )
+
+[node name="chao_abaixo" type="Sprite" parent="cenário" index="29"]
+
+position = Vector2( 312.945, 512.755 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo2" type="Sprite" parent="cenário" index="30"]
+
+position = Vector2( 60.8755, 512.755 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo4" type="Sprite" parent="cenário" index="31"]
+
+position = Vector2( 60.8031, 606.098 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo5" type="Sprite" parent="cenário" index="32"]
+
+position = Vector2( 186.504, 606.098 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo6" type="Sprite" parent="cenário" index="33"]
+
+position = Vector2( 313.3, 606.098 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo7" type="Sprite" parent="cenário" index="34"]
+
+position = Vector2( 439.002, 606.098 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo8" type="Sprite" parent="cenário" index="35"]
+
+position = Vector2( 561.909, 606.098 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo38" type="Sprite" parent="cenário" index="36"]
+
+position = Vector2( 687.909, 606.098 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo39" type="Sprite" parent="cenário" index="37"]
+
+position = Vector2( 815.909, 606.098 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo40" type="Sprite" parent="cenário" index="38"]
+
+position = Vector2( 942.909, 606.098 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo41" type="Sprite" parent="cenário" index="39"]
+
+position = Vector2( 1069.91, 606.098 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo9" type="Sprite" parent="cenário" index="40"]
+
+position = Vector2( 9421.3, 663.586 )
+scale = Vector2( 1, 0.992171 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo10" type="Sprite" parent="cenário" index="41"]
+
+position = Vector2( 9294.2, 663.586 )
+scale = Vector2( 1, 0.992171 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo11" type="Sprite" parent="cenário" index="42"]
+
+position = Vector2( 9167.39, 663.189 )
+scale = Vector2( 1, 0.992171 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo12" type="Sprite" parent="cenário" index="43"]
+
+position = Vector2( 9040.39, 663.189 )
+scale = Vector2( 1, 0.992171 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo13" type="Sprite" parent="cenário" index="44"]
+
+position = Vector2( 8913.39, 663.189 )
+scale = Vector2( 1, 0.992171 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo14" type="Sprite" parent="cenário" index="45"]
+
+position = Vector2( 8786.39, 663.189 )
+scale = Vector2( 1, 0.992171 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo15" type="Sprite" parent="cenário" index="46"]
+
+position = Vector2( 8659.39, 663.189 )
+scale = Vector2( 1, 0.992171 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo16" type="Sprite" parent="cenário" index="47"]
+
+position = Vector2( 8532.39, 663.189 )
+scale = Vector2( 1, 0.992171 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo17" type="Sprite" parent="cenário" index="48"]
+
+position = Vector2( 8405.39, 663.189 )
+scale = Vector2( 1, 0.992171 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo18" type="Sprite" parent="cenário" index="49"]
+
+position = Vector2( 8278.39, 663.189 )
+scale = Vector2( 1, 0.992171 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo19" type="Sprite" parent="cenário" index="50"]
+
+position = Vector2( 8151.39, 663.189 )
+scale = Vector2( 1, 0.992171 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo20" type="Sprite" parent="cenário" index="51"]
+
+position = Vector2( 8024.39, 663.189 )
+scale = Vector2( 1, 0.992171 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo21" type="Sprite" parent="cenário" index="52"]
+
+position = Vector2( 7897.39, 663.189 )
+scale = Vector2( 1, 0.992171 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo22" type="Sprite" parent="cenário" index="53"]
+
+position = Vector2( 7777.39, 663.189 )
+scale = Vector2( 1, 0.992171 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo23" type="Sprite" parent="cenário" index="54"]
+
+position = Vector2( 7651.39, 755.189 )
+scale = Vector2( 1, 0.992171 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo24" type="Sprite" parent="cenário" index="55"]
+
+position = Vector2( 7776.39, 755.189 )
+scale = Vector2( 1, 0.992171 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo25" type="Sprite" parent="cenário" index="56"]
+
+position = Vector2( 7902.39, 755.189 )
+scale = Vector2( 1, 0.992171 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo26" type="Sprite" parent="cenário" index="57"]
+
+position = Vector2( 8029.39, 755.189 )
+scale = Vector2( 1, 0.992171 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo27" type="Sprite" parent="cenário" index="58"]
+
+position = Vector2( 8154.39, 755.189 )
+scale = Vector2( 1, 0.992171 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo28" type="Sprite" parent="cenário" index="59"]
+
+position = Vector2( 10180.7, 756.294 )
+scale = Vector2( 1, 0.992171 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo29" type="Sprite" parent="cenário" index="60"]
+
+position = Vector2( 10053.7, 756.294 )
+scale = Vector2( 1, 0.992171 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo30" type="Sprite" parent="cenário" index="61"]
+
+position = Vector2( 9927.72, 756.294 )
+scale = Vector2( 1, 0.992171 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo31" type="Sprite" parent="cenário" index="62"]
+
+position = Vector2( 9800.72, 755.294 )
+scale = Vector2( 1, 0.992171 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo32" type="Sprite" parent="cenário" index="63"]
+
+position = Vector2( 9674.72, 755.294 )
+scale = Vector2( 1, 0.992171 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo33" type="Sprite" parent="cenário" index="64"]
+
+position = Vector2( 9547.72, 755.294 )
+scale = Vector2( 1, 0.992171 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo34" type="Sprite" parent="cenário" index="65"]
+
+position = Vector2( 9422.72, 755.294 )
+scale = Vector2( 1, 0.992171 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo35" type="Sprite" parent="cenário" index="66"]
+
+position = Vector2( 9296.72, 755.294 )
+scale = Vector2( 1, 0.992171 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo36" type="Sprite" parent="cenário" index="67"]
+
+position = Vector2( 9170.72, 755.294 )
+scale = Vector2( 1, 0.992171 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo37" type="Sprite" parent="cenário" index="68"]
+
+position = Vector2( 9045.72, 755.294 )
+scale = Vector2( 1, 0.992171 )
+texture = ExtResource( 6 )
+
+[node name="chao_abaixo3" type="Sprite" parent="cenário" index="69"]
+
+position = Vector2( 187.279, 512.785 )
+texture = ExtResource( 6 )
+
+[node name="rampa_ascendente" type="Sprite" parent="cenário" index="70"]
+
+position = Vector2( 7779.24, 559.339 )
+texture = ExtResource( 7 )
+
+[node name="plataforma2" type="Sprite" parent="cenário" index="71"]
+
+position = Vector2( 7333.22, 432.77 )
+texture = ExtResource( 8 )
+
+[node name="plataforma" type="Sprite" parent="cenário" index="72"]
+
+position = Vector2( 7651.22, 390.77 )
+texture = ExtResource( 8 )
+
+[node name="plataforma3" type="Sprite" parent="cenário" index="73"]
+
+position = Vector2( 7130.41, 371.489 )
+texture = ExtResource( 8 )
+
+[node name="plataforma4" type="Sprite" parent="cenário" index="74"]
+
+position = Vector2( 1544.98, 390.278 )
+texture = ExtResource( 8 )
+
+[node name="plataforma5" type="Sprite" parent="cenário" index="75"]
+
+position = Vector2( 2001.79, 442.895 )
+texture = ExtResource( 8 )
+
+[node name="plataforma8" type="Sprite" parent="cenário" index="76"]
+
+position = Vector2( 4412.12, -97.3012 )
+texture = ExtResource( 8 )
+
+[node name="plataforma15" type="Sprite" parent="cenário" index="77"]
+
+position = Vector2( 5684.7, 39.6907 )
+texture = ExtResource( 8 )
+
+[node name="plataforma17" type="Sprite" parent="cenário" index="78"]
+
+position = Vector2( 5925.48, -121.808 )
+texture = ExtResource( 8 )
+
+[node name="plataforma21" type="Sprite" parent="cenário" index="79"]
+
+position = Vector2( 6195.74, -162.466 )
+texture = ExtResource( 8 )
+
+[node name="plataforma22" type="Sprite" parent="cenário" index="80"]
+
+position = Vector2( 6461.21, -195.949 )
+texture = ExtResource( 8 )
+
+[node name="plataforma23" type="Sprite" parent="cenário" index="81"]
+
+position = Vector2( 6664.5, -172.033 )
+texture = ExtResource( 8 )
+
+[node name="plataforma24" type="Sprite" parent="cenário" index="82"]
+
+position = Vector2( 6913.24, -195.949 )
+texture = ExtResource( 8 )
+
+[node name="plataforma25" type="Sprite" parent="cenário" index="83"]
+
+position = Vector2( 7178.8, -178.245 )
+texture = ExtResource( 8 )
+
+[node name="plataforma26" type="Sprite" parent="cenário" index="84"]
+
+position = Vector2( 7491.51, -180.895 )
+texture = ExtResource( 8 )
+
+[node name="plataforma27" type="Sprite" parent="cenário" index="85"]
+
+position = Vector2( 7865.11, -134.194 )
+texture = ExtResource( 8 )
+
+[node name="plataforma18" type="Sprite" parent="cenário" index="86"]
+
+position = Vector2( 6125.35, 155.426 )
+texture = ExtResource( 8 )
+
+[node name="plataforma19" type="Sprite" parent="cenário" index="87"]
+
+position = Vector2( 6414.05, 214.652 )
+texture = ExtResource( 8 )
+
+[node name="plataforma20" type="Sprite" parent="cenário" index="88"]
+
+position = Vector2( 6739.41, 290.065 )
+texture = ExtResource( 8 )
+
+[node name="plataforma16" type="Sprite" parent="cenário" index="89"]
+
+position = Vector2( 5863.52, 113.672 )
+texture = ExtResource( 8 )
+
+[node name="plataforma9" type="Sprite" parent="cenário" index="90"]
+
+position = Vector2( 4127.79, -141.936 )
+texture = ExtResource( 8 )
+
+[node name="plataforma10" type="Sprite" parent="cenário" index="91"]
+
+position = Vector2( 3937.62, -188.958 )
+texture = ExtResource( 8 )
+
+[node name="plataforma12" type="Sprite" parent="cenário" index="92"]
+
+position = Vector2( 3485.27, 420.801 )
+texture = ExtResource( 8 )
+
+[node name="plataforma13" type="Sprite" parent="cenário" index="93"]
+
+position = Vector2( 3888.05, 394.244 )
+texture = ExtResource( 8 )
+
+[node name="plataforma14" type="Sprite" parent="cenário" index="94"]
+
+position = Vector2( 4236.61, 296.871 )
+texture = ExtResource( 8 )
+
+[node name="plataforma11" type="Sprite" parent="cenário" index="95"]
+
+position = Vector2( 3712.68, -122.229 )
+texture = ExtResource( 8 )
+
+[node name="plataforma6" type="Sprite" parent="cenário" index="96"]
+
+position = Vector2( 1725.13, 505.602 )
+texture = ExtResource( 8 )
+
+[node name="plataforma7" type="Sprite" parent="cenário" index="97"]
+
+position = Vector2( 1305.81, 481.161 )
+texture = ExtResource( 8 )
+
+[node name="chao_meio_meio" type="Sprite" parent="cenário" index="98"]
+
+position = Vector2( 4884.03, 55.6509 )
+texture = ExtResource( 4 )
+
+[node name="chao_meio_meio7" type="Sprite" parent="cenário" index="99"]
+
+position = Vector2( 2370.11, 509.601 )
+texture = ExtResource( 4 )
+
+[node name="chao_meio_meio8" type="Sprite" parent="cenário" index="100"]
+
+position = Vector2( 2495.11, 509.601 )
+texture = ExtResource( 4 )
+
+[node name="chao_meio_meio9" type="Sprite" parent="cenário" index="101"]
+
+position = Vector2( 2621.11, 509.601 )
+texture = ExtResource( 4 )
+
+[node name="chao_meio_meio10" type="Sprite" parent="cenário" index="102"]
+
+position = Vector2( 2742.11, 509.601 )
+texture = ExtResource( 4 )
+
+[node name="chao_meio_meio11" type="Sprite" parent="cenário" index="103"]
+
+position = Vector2( 2864.11, 509.601 )
+texture = ExtResource( 4 )
+
+[node name="chao_meio_meio12" type="Sprite" parent="cenário" index="104"]
+
+position = Vector2( 2987.11, 509.601 )
+texture = ExtResource( 4 )
+
+[node name="chao_meio_meio13" type="Sprite" parent="cenário" index="105"]
+
+position = Vector2( 3112.82, 509.442 )
+texture = ExtResource( 4 )
+
+[node name="chao_meio_meio14" type="Sprite" parent="cenário" index="106"]
+
+position = Vector2( 3235.22, 509.431 )
+texture = ExtResource( 4 )
+
+[node name="chao_meio_meio6" type="Sprite" parent="cenário" index="107"]
+
+position = Vector2( 4757.03, 55.4846 )
+texture = ExtResource( 4 )
+
+[node name="chao_meio_meio2" type="Sprite" parent="cenário" index="108"]
+
+position = Vector2( 5009.6, 56.5171 )
+texture = ExtResource( 4 )
+
+[node name="chao_meio_meio3" type="Sprite" parent="cenário" index="109"]
+
+position = Vector2( 5132.67, 56.5171 )
+texture = ExtResource( 4 )
+
+[node name="chao_meio_meio4" type="Sprite" parent="cenário" index="110"]
+
+position = Vector2( 5259.25, 56.5171 )
+texture = ExtResource( 4 )
+
+[node name="chao_meio_meio5" type="Sprite" parent="cenário" index="111"]
+
+position = Vector2( 5382.32, 56.2751 )
+texture = ExtResource( 4 )
+
+[node name="chao_no_meio" type="Sprite" parent="cenário" index="112"]
+
+position = Vector2( 4756.63, 156.028 )
+texture = ExtResource( 6 )
+
+[node name="chao_no_meio19" type="Sprite" parent="cenário" index="113"]
+
+position = Vector2( 4630.27, 156.905 )
+texture = ExtResource( 6 )
+
+[node name="chao_no_meio20" type="Sprite" parent="cenário" index="114"]
+
+position = Vector2( 4630.68, 247.955 )
+texture = ExtResource( 6 )
+
+[node name="chao_no_meio21" type="Sprite" parent="cenário" index="115"]
+
+position = Vector2( 4508.57, 247.37 )
+texture = ExtResource( 6 )
+
+[node name="chao_no_meio5" type="Sprite" parent="cenário" index="116"]
+
+position = Vector2( 5010.32, 154.614 )
+texture = ExtResource( 6 )
+
+[node name="chao_no_meio6" type="Sprite" parent="cenário" index="117"]
+
+position = Vector2( 5136.5, 154.614 )
+texture = ExtResource( 6 )
+
+[node name="chao_no_meio4" type="Sprite" parent="cenário" index="118"]
+
+position = Vector2( 4882.98, 155.201 )
+texture = ExtResource( 6 )
+
+[node name="chao_no_meio7" type="Sprite" parent="cenário" index="119"]
+
+position = Vector2( 5260.5, 154.614 )
+texture = ExtResource( 6 )
+
+[node name="chao_no_meio8" type="Sprite" parent="cenário" index="120"]
+
+position = Vector2( 5381.5, 154.614 )
+texture = ExtResource( 6 )
+
+[node name="chao_no_meio2" type="Sprite" parent="cenário" index="121"]
+
+position = Vector2( 4756.76, 247.129 )
+texture = ExtResource( 6 )
+
+[node name="chao_no_meio9" type="Sprite" parent="cenário" index="122"]
+
+position = Vector2( 4881.96, 247.97 )
+texture = ExtResource( 6 )
+
+[node name="chao_no_meio10" type="Sprite" parent="cenário" index="123"]
+
+position = Vector2( 5008.61, 247.385 )
+texture = ExtResource( 6 )
+
+[node name="chao_no_meio11" type="Sprite" parent="cenário" index="124"]
+
+position = Vector2( 5134.61, 247.385 )
+texture = ExtResource( 6 )
+
+[node name="chao_no_meio12" type="Sprite" parent="cenário" index="125"]
+
+position = Vector2( 5260.61, 247.385 )
+texture = ExtResource( 6 )
+
+[node name="chao_no_meio13" type="Sprite" parent="cenário" index="126"]
+
+position = Vector2( 5380.61, 247.385 )
+texture = ExtResource( 6 )
+
+[node name="chao_no_meio3" type="Sprite" parent="cenário" index="127"]
+
+position = Vector2( 4756.76, 340.26 )
+texture = ExtResource( 6 )
+
+[node name="chao_no_meio14" type="Sprite" parent="cenário" index="128"]
+
+position = Vector2( 4883.76, 340.26 )
+texture = ExtResource( 6 )
+
+[node name="chao_no_meio15" type="Sprite" parent="cenário" index="129"]
+
+position = Vector2( 5010.76, 340.26 )
+texture = ExtResource( 6 )
+
+[node name="chao_no_meio16" type="Sprite" parent="cenário" index="130"]
+
+position = Vector2( 5132.76, 340.26 )
+texture = ExtResource( 6 )
+
+[node name="chao_no_meio17" type="Sprite" parent="cenário" index="131"]
+
+position = Vector2( 5258.76, 340.26 )
+texture = ExtResource( 6 )
+
+[node name="chao_no_meio18" type="Sprite" parent="cenário" index="132"]
+
+position = Vector2( 5378.76, 340.26 )
+texture = ExtResource( 6 )
+
+[node name="rampa" type="Sprite" parent="cenário" index="133"]
+
+position = Vector2( 4634.19, 53.2803 )
+texture = ExtResource( 7 )
+
+[node name="rampa2" type="Sprite" parent="cenário" index="134"]
+
+position = Vector2( 4509.19, 147.28 )
+texture = ExtResource( 7 )
+
+[node name="paredes" type="Node" parent="." index="4"]
+
+editor/display_folded = true
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="paredes" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="paredes/StaticBody2D7" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 1240.71, 449.335, 1369.23, 449.335, 1369.23, 517.562, 1240.71, 517.562 )
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="paredes" index="1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="paredes/StaticBody2D8" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 1478.71, 349.374, 1608.82, 349.374, 1608.82, 427.121, 1478.71, 427.121 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="paredes" index="2"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="paredes/StaticBody2D9" index="0"]
+
+position = Vector2( -5.27429, -109.002 )
+build_mode = 0
+polygon = PoolVector2Array( 1669.11, 579.443, 1669.11, 650.843, 1797.63, 650.843, 1797.63, 579.443 )
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="paredes" index="3"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="paredes/StaticBody2D10" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 1934.25, 403.957, 2067.21, 403.957, 2067.21, 482.103, 1934.25, 482.103 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="paredes" index="4"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="paredes/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 7587.53, 800.239, 7587.53, 605.437, 7714.15, 605.437, 7836.88, 508.035, 9354.39, 508.035, 9481.83, 604.536, 10241.8, 604.536, 10243.4, 798.11, 8980.44, 799.697, 8980.44, 709.256, 8217.25, 709.256, 8217.25, 799.697 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="paredes" index="5"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="paredes/StaticBody2D2" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 7587.46, 349.788, 7717.57, 349.788, 7717.57, 422.776, 7587.46, 422.776 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="paredes" index="6"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="paredes/StaticBody2D3" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 7266.95, 394.215, 7397.06, 394.215, 7397.06, 470.376, 7266.95, 470.376 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="paredes" index="7"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="paredes/StaticBody2D4" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 7063.85, 330.748, 7195.55, 330.748, 7195.55, 413.255, 7063.85, 413.255 )
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="paredes" index="8"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="paredes/StaticBody2D5" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -4.54401, 354.594, 245.056, 354.594, 373.355, 453.734, 1136.15, 453.734, 1136.15, 648.516, -3.37766, 649.682 )
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="paredes" index="9"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="paredes/StaticBody2D6" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 0.118774, 351.699, 0.118774, -240.501, -48.5819, -240.501, -46.6338, 351.699 )
+
+[node name="StaticBody2D11" type="StaticBody2D" parent="paredes" index="10"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="paredes/StaticBody2D11" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 4445.86, 293.804, 4445.86, 190.701, 4695.03, -1.18373, 5446.81, -1.18373, 5446.87, 383.698, 4692.22, 383.698, 4692.22, 293.484 )
+
+[node name="StaticBody2D12" type="StaticBody2D" parent="paredes" index="11"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="paredes/StaticBody2D12" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 2306.74, 453.245, 3294.79, 453.245, 3294.69, 559.469, 2306.19, 559.469 )
+
+[node name="StaticBody2D13" type="StaticBody2D" parent="paredes" index="12"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="paredes/StaticBody2D13" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 3421.11, 381.211, 3549.53, 381.211, 3549.53, 459.106, 3421.11, 459.106 )
+
+[node name="StaticBody2D14" type="StaticBody2D" parent="paredes" index="13"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="paredes/StaticBody2D14" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 3820.83, 354.501, 3952.57, 354.501, 3952.57, 431.827, 3820.83, 431.827 )
+
+[node name="StaticBody2D15" type="StaticBody2D" parent="paredes" index="14"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="paredes/StaticBody2D15" index="0"]
+
+position = Vector2( -13, 0 )
+build_mode = 0
+polygon = PoolVector2Array( 4185.99, 255.694, 4314.86, 255.694, 4314.86, 302.813, 4314.86, 335.885, 4185.99, 335.885 )
+
+[node name="StaticBody2D16" type="StaticBody2D" parent="paredes" index="15"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="paredes/StaticBody2D16" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 4347.21, -136.472, 4476.64, -136.472, 4477.02, -57.2274, 4347.56, -56.8537 )
+
+[node name="StaticBody2D17" type="StaticBody2D" parent="paredes" index="16"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="paredes/StaticBody2D17" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 4062.86, -180.609, 4191.31, -180.609, 4191.31, -104.778, 4062.86, -104.778 )
+
+[node name="StaticBody2D18" type="StaticBody2D" parent="paredes" index="17"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="paredes/StaticBody2D18" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 3874.15, -226.472, 4002.07, -226.472, 4002.07, -149.869, 3873.39, -149.869 )
+
+[node name="StaticBody2D19" type="StaticBody2D" parent="paredes" index="18"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="paredes/StaticBody2D19" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 3648.05, -161.028, 3777.27, -161.028, 3777.27, -84.423, 3648.05, -84.423 )
+
+[node name="StaticBody2D20" type="StaticBody2D" parent="paredes" index="19"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="paredes/StaticBody2D20" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 5619.57, 1.36655, 5749.82, 1.36655, 5749.82, 79.8612, 5620.14, 79.2924 )
+
+[node name="StaticBody2D21" type="StaticBody2D" parent="paredes" index="20"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="paredes/StaticBody2D21" index="0"]
+
+position = Vector2( -104, -8 )
+build_mode = 0
+polygon = PoolVector2Array( 5903.32, 80.192, 6035.35, 80.192, 6034.5, 153.069, 5905.03, 153.069 )
+
+[node name="StaticBody2D22" type="StaticBody2D" parent="paredes" index="21"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="paredes/StaticBody2D22" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 6055.7, 115.024, 6192.83, 115.024, 6192.83, 195.896, 6055.7, 195.896 )
+
+[node name="StaticBody2D23" type="StaticBody2D" parent="paredes" index="22"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="paredes/StaticBody2D23" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 6348.25, 175.136, 6478.83, 175.834, 6478.83, 255.445, 6348.94, 253.35 )
+
+[node name="StaticBody2D24" type="StaticBody2D" parent="paredes" index="23"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="paredes/StaticBody2D24" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 6675, 251.053, 6803.42, 251.053, 6803.42, 328.948, 6676.05, 328.948 )
+
+[node name="StaticBody2D25" type="StaticBody2D" parent="paredes" index="24"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="paredes/StaticBody2D25" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 10242.3, 621.182, 10242.7, -86.8164, 10302.5, -86.8164, 10301.2, 619.942 )
+
+[node name="StaticBody2D26" type="StaticBody2D" parent="paredes" index="25"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="paredes/StaticBody2D26" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 5860.04, -159.066, 5990.69, -159.066, 5990.22, -83.0856, 5860.04, -83.5489 )
+
+[node name="StaticBody2D27" type="StaticBody2D" parent="paredes" index="26"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="paredes/StaticBody2D27" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 6130.18, -200.602, 6260.83, -200.602, 6260.83, -122.306, 6130.18, -121.843 )
+
+[node name="StaticBody2D28" type="StaticBody2D" parent="paredes" index="27"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="paredes/StaticBody2D28" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 6397.68, -230.736, 6525.05, -230.736, 6525.05, -154.946, 6397.68, -155.999 )
+
+[node name="StaticBody2D29" type="StaticBody2D" parent="paredes" index="28"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="paredes/StaticBody2D29" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 6599.67, -210.138, 6729.26, -209.684, 6729.03, -134.677, 6599.79, -134.946 )
+
+[node name="StaticBody2D30" type="StaticBody2D" parent="paredes" index="29"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="paredes/StaticBody2D30" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 6847.21, -233.578, 6976.69, -233.578, 6976.69, -158.841, 6847.21, -158.841 )
+
+[node name="StaticBody2D31" type="StaticBody2D" parent="paredes" index="30"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="paredes/StaticBody2D31" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 7113.53, -214.631, 7241.95, -214.631, 7241.95, -140.946, 7113.53, -140.946 )
+
+[node name="StaticBody2D32" type="StaticBody2D" parent="paredes" index="31"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="paredes/StaticBody2D32" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 7425.95, -214.153, 7554.83, -214.153, 7554.83, -142.554, 7425.95, -142.554 )
+
+[node name="StaticBody2D33" type="StaticBody2D" parent="paredes" index="32"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="paredes/StaticBody2D33" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 7799.19, -172.848, 7929.51, -172.848, 7929.51, -94.8261, 7799.19, -94.8261 )
+
+[node name="musica" type="AudioStreamPlayer" parent="." index="5"]
+
+stream = ExtResource( 9 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Master"
+
+
