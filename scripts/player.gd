@@ -12,6 +12,7 @@ const JUMP_HEIGHT = -750
 const NORMAL = Vector2(0, -1)
 var motion = Vector2() #var que modifica pos X e Y
 var tempo_de_recarga = 0.5
+var anim = "" #var que vai guardar animacao do player
 
 func _ready():
 	add_to_group(metadados.GRUPO_PLAYER)
@@ -25,15 +26,16 @@ func _move(delta):
 	var sprite = get_node('Sprite') #Guarda node de sprite para usar metodos
 	motion.y += GRAVITY
 	if Input.is_action_pressed('right'):
-		get_node("anim").play("walking_player")
+		anim = get_node("anim").play("walking_player")
 		sprite.set_flip_h(false) #Inverte a posicao do sprite em X
 		motion.x = SPEED
 	elif Input.is_action_pressed('left'):
+		anim = get_node("anim").play("walking_player")
 		sprite.set_flip_h(true) #Invente a posicao do sprite em X
 		motion.x = -SPEED
 	else:
 		motion.x = 0
-		
+		#anim = get_node("anim").play("walking") #aqui vai ficar animacao de IDLE/parado
 		
 		
 	if Input.is_action_just_pressed('jump') and is_on_floor(): #jump foi uma tecla configura com valor space

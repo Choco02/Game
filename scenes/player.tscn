@@ -35,8 +35,9 @@ scale = Vector2( 2.46154, 2.46154 )
 texture = ExtResource( 2 )
 vframes = 5
 hframes = 5
+frame = 1
 region_enabled = true
-region_rect = Rect2( 40, 141, 39, 47 )
+region_rect = Rect2( 0, 0, 40, 47 )
 _sections_unfolded = [ "Animation", "Material", "Region", "Transform" ]
 
 [node name="anim" type="AnimationPlayer" parent="." index="2"]
@@ -46,8 +47,8 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/shooting = ExtResource( 3 )
-anims/walking = ExtResource( 4 )
+anims/shooting_player = ExtResource( 3 )
+anims/walking_player = ExtResource( 4 )
 blend_times = [  ]
 
 
