@@ -4,33 +4,15 @@
 [ext_resource path="res://sprites/best_sprite_sheet.png" type="Texture" id=2]
 [ext_resource path="res://animations/idle.tres" type="Animation" id=3]
 [ext_resource path="res://animations/perda_de_vida_player.tres" type="Animation" id=4]
-[ext_resource path="res://animations/walking_player.tres" type="Animation" id=5]
+[ext_resource path="res://animations/shooting_player.tres" type="Animation" id=5]
+[ext_resource path="res://animations/walking_player.tres" type="Animation" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 47.7438, 47.7003 )
 
-[sub_resource type="Animation" id=2]
-
-resource_name = "shooting_player"
-length = 0.6
-loop = true
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:region_rect")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 1,
-"values": [ Rect2( 3, 158, 43, 51 ), Rect2( 46, 157, 43, 52 ), Rect2( 89, 157, 43, 52 ) ]
-}
-
-[node name="player" type="KinematicBody2D" index="0"]
+[node name="player" type="KinematicBody2D"]
 
 position = Vector2( 0.188507, 1.47448 )
 scale = Vector2( 0.994109, 1.04608 )
@@ -54,7 +36,7 @@ position = Vector2( 1.90735e-006, 1.90735e-006 )
 scale = Vector2( 2.46154, 2.46154 )
 texture = ExtResource( 2 )
 region_enabled = true
-region_rect = Rect2( 3, 262, 43, 51 )
+region_rect = Rect2( 3, 158, 43, 51 )
 _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform" ]
 
 [node name="anim" type="AnimationPlayer" parent="." index="2"]
@@ -66,8 +48,8 @@ playback_default_blend_time = 0.0
 playback_speed = 1.0
 anims/idle = ExtResource( 3 )
 anims/perda_de_vida_player = ExtResource( 4 )
-anims/shooting_player = SubResource( 2 )
-anims/walking_player = ExtResource( 5 )
+anims/shooting_player = ExtResource( 5 )
+anims/walking_player = ExtResource( 6 )
 blend_times = [  ]
 
 

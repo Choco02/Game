@@ -23,22 +23,33 @@ func _physics_process(delta):
 	pass
 	
 func _move(delta):
+	var current_anim = get_node("anim").current_animation
 	var sprite = get_node('Sprite') #Guarda node de sprite para usar metodos
 	motion.y += GRAVITY
+	
 	if Input.is_action_pressed('right'):
-		anim.play("walking_player")
+		#print(get_global_position().x)
 		sprite.set_flip_h(false) #Inverte a posicao do sprite em X
+		if current_anim != "walking_player":
+			print(current_anim)
+			anim.play("walking_player")
 		motion.x = SPEED
+	
 	elif Input.is_action_pressed('left'):
+		#print(get_global_position().x)
 		#anim.play("walking_player") #So se usa play uma vez para a mesma animacao, se usar uma segunda vez animacao para
 		#a solucao e verificar se a animacao walking esta executando quando tecla e pressionado (dentro dos if)
 		#se nao estiver sendo pressionada nenhuma tecla, rodar a animacao "idle"
 		sprite.set_flip_h(true) #Invente a posicao do sprite em X
+		if current_anim != "walking_player":
+			print(current_anim)
+			anim.play("walking_player")
 		motion.x = -SPEED
 	else:
-		motion.x = 0
-		anim.play("idle") #aqui vai ficar animacao de IDLE/parado
-		
+		if current_anim != "idle":
+			anim.play("idle")
+		motion.x = 0	
+	
 		
 	if Input.is_action_just_pressed('jump') and is_on_floor(): #jump foi uma tecla configura com valor space
 		motion.y = JUMP_HEIGHT
@@ -63,7 +74,10 @@ func _move(delta):
 			#metodos "set_global_pos" agora é "set_global_position,
 			#o mesmo para "get_global_position"
 			novo_tiro.set_global_position(get_node("arma").get_global_position())
-			get_node("anim").play("shooting_player")
+			print(current_anim)
+			if current_anim != "shooting_player":
+				anim.play("shooting_player")
+			#anim.play("shooting_player")
 			
 			#novo_tiro.set_linear_velocity(Vector2(1,0)) 
 			#metodo "set_linear_velocity" nao encontrado, talvez nao exista mais nessa versao
