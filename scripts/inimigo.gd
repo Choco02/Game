@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 const GRAVITY = 100
-const DISTANCIA = 200
+const DISTANCIA = 2000
 var motion = Vector2()
 var andar = 100
 var ativado = 0
@@ -18,6 +18,7 @@ func player_vivo(existencia):
 func player_perto():
 	var sprite_ini = get_node('skin_do_inimigo') 
 	var distancia = (get_global_position() - get_node("../player").get_global_position()).length()
+	print(distancia)
 	if distancia < DISTANCIA:
 		ativado = 1
 		if get_global_position().x - get_node("../player").get_global_position().x < 0 : 
