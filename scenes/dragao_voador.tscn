@@ -11,7 +11,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 32, 25 )
 
-[node name="dragao_voador" type="KinematicBody2D"]
+[node name="dragao_voador" type="KinematicBody2D" index="0"]
 
 position = Vector2( 4, 0 )
 input_pickable = false

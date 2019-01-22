@@ -44,13 +44,13 @@ func time(delta):
 	timer += delta
 	#print(timer)
 	if timer >= time_max:
-		if current_anim != "voador_shooting":
-			get_node("anim").play("voador_shooting")
+		#if current_anim == "voador_idle":
+		#	print("shooting acabou")
+		#	get_node("anim").play("voador_idle")
 		var tiro = pre_tiro.instance()
 		tiro.direcao = direcao
 		tiro.set_global_position(get_global_position())
 		get_parent().add_child(tiro)
-		get_node("anim").play("voador_idle")
 		timer = 0.0
 		
 # agora le toma dano e-e
