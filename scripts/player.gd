@@ -37,7 +37,6 @@ func _move(delta):
 		#print(get_global_position().x)
 		sprite.set_flip_h(false) #Inverte a posicao do sprite em X
 		if current_anim != "walking_player":
-			print(current_anim)
 			anim.play("walking_player")
 		motion.x = SPEED
 	
@@ -48,7 +47,7 @@ func _move(delta):
 		#se nao estiver sendo pressionada nenhuma tecla, rodar a animacao "idle"
 		sprite.set_flip_h(true) #Invente a posicao do sprite em X
 		if current_anim != "walking_player":
-			print(current_anim)
+
 			anim.play("walking_player")
 		motion.x = -SPEED
 	else:
@@ -82,7 +81,7 @@ func _move(delta):
 			#metodos "set_global_pos" agora é "set_global_position,
 			#o mesmo para "get_global_position"
 			novo_tiro.set_global_position(get_node("arma").get_global_position())
-			print(current_anim)
+
 			#anim.play("shooting_player")
 			
 			#novo_tiro.set_linear_velocity(Vector2(1,0)) 
