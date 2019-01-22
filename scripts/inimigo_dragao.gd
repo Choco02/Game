@@ -2,12 +2,10 @@ extends KinematicBody2D
 
 var motion = Vector2()
 var pre_tiro = preload("res://scenes/tiro_dragao.tscn")
-var hp = 3
-var direcao = 1
-var distancia = 0
+var hp = 5
 ######################
 var timer = 0.0####### var para medir cooldown de disparo de dragao
-const time_max = 5.0##
+const time_max = 3.5##
 ######################
 onready var current_anim = get_node("anim").current_animation
 
@@ -17,43 +15,24 @@ func _ready():
 	pass
 
 func _process(delta):
-	motion1(delta)
-	time(delta)
+	atirar(delta)
 	
 	pass
 
 
-func motion1(delta):
-	var textura = get_node('Sprite')
-	
-	motion.x = -100 * direcao
-	distancia += motion.x * delta
-	# alguma melhoria nos doragons
-	motion = move_and_slide(motion)
-	
-	if distancia < -1000 : 
-		textura.set_flip_h(true)
-		direcao = -1
-	if distancia > 0: 
-		textura.set_flip_h(false)
-		direcao = 1
-	
-	pass
-
-func time(delta):
+func atirar(delta):
 	timer += delta
 	#print(timer)
 	if timer >= time_max:
 		if current_anim != "voador_shooting":
 			get_node("anim").play("voador_shooting")
 		var tiro = pre_tiro.instance()
-		tiro.direcao = direcao
 		tiro.set_global_position(get_global_position())
 		get_parent().add_child(tiro)
 		get_node("anim").play("voador_idle")
 		timer = 0.0
 		
-# agora le toma dano e-e
+# agora ele toma dano e-e
 func damage(dano):
 	hp -= dano
 	if(hp <= 0):
