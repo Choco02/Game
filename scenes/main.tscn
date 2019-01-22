@@ -15,40 +15,7 @@
 
 [node name="player" parent="." index="0" instance=ExtResource( 1 )]
 
-editor/display_folded = true
 position = Vector2( 514.404, 306.972 )
-
-[node name="arma" type="Position2D" parent="player" index="2"]
-
-position = Vector2( -5.14563, 12.4966 )
-_sections_unfolded = [ "Z Index" ]
-
-[node name="Camera2D" type="Camera2D" parent="player" index="3"]
-
-position = Vector2( 0, 24.8547 )
-offset = Vector2( 0, -130 )
-anchor_mode = 1
-rotating = false
-current = true
-zoom = Vector2( 1, 1 )
-limit_left = -10000000
-limit_top = -10000000
-limit_right = 10000000
-limit_bottom = 10000000
-limit_smoothed = false
-drag_margin_h_enabled = true
-drag_margin_v_enabled = true
-smoothing_enabled = false
-smoothing_speed = 5.0
-offset_v = 0.0
-offset_h = 0.0
-drag_margin_left = 0.2
-drag_margin_top = 0.2
-drag_margin_right = 0.2
-drag_margin_bottom = 0.2
-editor_draw_screen = true
-editor_draw_limits = false
-editor_draw_drag_margin = false
 
 [node name="ininimigo1" parent="." index="1" instance=ExtResource( 2 )]
 

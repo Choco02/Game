@@ -12,7 +12,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 47.7438, 47.7003 )
 
-[node name="player" type="KinematicBody2D"]
+[node name="player" type="KinematicBody2D" index="0"]
 
 position = Vector2( 0.188507, 1.47448 )
 scale = Vector2( 0.994109, 1.04608 )
@@ -51,5 +51,32 @@ anims/perda_de_vida_player = ExtResource( 4 )
 anims/shooting_player = ExtResource( 5 )
 anims/walking_player = ExtResource( 6 )
 blend_times = [  ]
+
+[node name="arma" type="Position2D" parent="." index="3"]
+
+[node name="Camera2D" type="Camera2D" parent="." index="4"]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
 
 
