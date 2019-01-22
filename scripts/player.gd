@@ -13,6 +13,7 @@ const JUMP_HEIGHT = -750
 const NORMAL = Vector2(0, -1)
 var motion = Vector2() #var que modifica pos X e Y
 var tempo_de_recarga = 0.5
+var vivo = 1 
 onready var anim = get_node("anim") #var que vai guardar animacao do player
 
 func _ready():
@@ -20,7 +21,11 @@ func _ready():
 	pass
 
 func _physics_process(delta):
-	_move(delta)
+	if vivo == 1 :
+		_move(delta)
+	else:
+		if Input.is_action_pressed("Respawn"):
+			get_tree().reload_current_scene()
 	pass
 	
 func _move(delta):
@@ -97,5 +102,6 @@ func dano_ao_player(dano_do_inimigo):
 	emit_signal("hp_change", hp ) 
 	if hp <= 0 :
 		emit_signal("dead", true)
-		queue_free()
+		vivo = 0
+		get_node("Sprite").visible = false
 	pass
