@@ -11,7 +11,7 @@
 [ext_resource path="res://sounds/stage_1_music.ogg" type="AudioStream" id=9]
 [ext_resource path="res://scenes/dragao_voador.tscn" type="PackedScene" id=10]
 
-[node name="main" type="Node"]
+[node name="main" type="Node" index="0"]
 
 [node name="player" parent="." index="0" instance=ExtResource( 1 )]
 

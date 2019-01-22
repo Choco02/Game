@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 var motion = Vector2()
 var pre_tiro = preload("res://scenes/tiro_dragao.tscn")
+var hp = 3
 ######################
 var timer = 0.0####### var para medir cooldown de disparo de dragao
 const time_max = 5.0##
@@ -9,6 +10,7 @@ const time_max = 5.0##
 onready var current_anim = get_node("anim").current_animation
 
 func _ready():
+	add_to_group(metadados.GRUPO_INIMIGO)
 	set_process(true)
 	pass
 
@@ -40,4 +42,10 @@ func time(delta):
 		get_parent().add_child(tiro)
 		get_node("anim").play("voador_idle")
 		timer = 0.0
-	
+		
+# agora le toma dano e-e
+func damage(dano):
+	hp -= dano
+	if(hp <= 0):
+		queue_free()
+	pass
