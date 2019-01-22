@@ -18,11 +18,11 @@ func player_vivo(existencia):
 # verifica a proximidade e direção do jogador
 func player_perto():
 	var sprite_ini = get_node('skin_do_inimigo') 
-	var distancia = (get_global_position() - get_node("../player").get_global_position()).length()
+	var distancia = (get_global_position() - get_node("../../player").get_global_position()).length()
 	#print(distancia)
 	if distancia < DISTANCIA:
 		ativado = 1
-		if get_global_position().x - get_node("../player").get_global_position().x < 0 : 
+		if get_global_position().x - get_node("../../player").get_global_position().x < 0 : 
 			direcao = 1 
 			sprite_ini.set_flip_h(false)
 		else:
@@ -33,7 +33,7 @@ func player_perto():
 
 	
 func _ready():
-	get_node("../player").connect("dead", self,"player_vivo")
+	get_node("../../player").connect("dead", self,"player_vivo")
 	add_to_group(metadados.GRUPO_INIMIGO)
 	pass
 

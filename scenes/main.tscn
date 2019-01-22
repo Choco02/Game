@@ -1305,7 +1305,7 @@ polygon = PoolVector2Array( 7799.19, -172.848, 7929.51, -172.848, 7929.51, -94.8
 stream = ExtResource( 8 )
 volume_db = 0.0
 pitch_scale = 1.0
-autoplay = true
+autoplay = false
 mix_target = 0
 bus = "Master"
 
