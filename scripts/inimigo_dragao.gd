@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var motion = Vector2()
 var pre_tiro = preload("res://scenes/tiro_dragao.tscn")
-var hp = 20
+var hp = 3
 ######################
 var timer = 0.0####### var para medir cooldown de disparo de dragao
 const time_max = 3.5##
