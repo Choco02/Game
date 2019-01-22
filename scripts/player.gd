@@ -4,7 +4,7 @@ onready var tiro = preload("res://scenes/tiro.tscn")
 
 signal dead(morto)
 
-var hp = 1
+var hp = 2
 
 const SPEED = 300
 const GRAVITY = 27
