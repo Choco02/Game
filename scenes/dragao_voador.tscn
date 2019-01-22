@@ -11,7 +11,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 32, 25 )
 
-[node name="dragao_voador" type="KinematicBody2D" index="0"]
+[node name="dragao_voador" type="KinematicBody2D"]
 
 position = Vector2( 4, 0 )
 input_pickable = false
@@ -38,7 +38,7 @@ _sections_unfolded = [ "Animation" ]
 [node name="anim" type="AnimationPlayer" parent="." index="2"]
 
 root_node = NodePath("..")
-autoplay = "voador_death"
+autoplay = "voador_idle"
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0

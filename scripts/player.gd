@@ -68,6 +68,8 @@ func _move(delta):
 		# gera um vetor unitário na direção certa
 		vetor_vel_inicial = vetor_vel_inicial.normalized()
 		if tempo_de_recarga <= 0:
+			if current_anim != "shooting_player":
+				anim.play("shooting_player")
 			var novo_tiro = tiro.instance()
 			novo_tiro.direcao_inicial = vetor_vel_inicial
 			get_parent().add_child(novo_tiro) #printando pos inicial de novo_tiro
@@ -75,8 +77,6 @@ func _move(delta):
 			#o mesmo para "get_global_position"
 			novo_tiro.set_global_position(get_node("arma").get_global_position())
 			print(current_anim)
-			if current_anim != "shooting_player":
-				anim.play("shooting_player")
 			#anim.play("shooting_player")
 			
 			#novo_tiro.set_linear_velocity(Vector2(1,0)) 

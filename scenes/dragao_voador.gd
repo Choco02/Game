@@ -20,7 +20,13 @@ func _process(delta):
 
 
 func motion1(delta):
-	motion.x = -100
+	print(get_global_position().x)
+	if get_global_position().x >= 1000:
+		motion.x = -100
+		get_node("Sprite").set_flip_h(false)
+	elif get_global_position().x <= 300:
+		motion.x = 100
+		get_node("Sprite").set_flip_h(true)
 	motion = move_and_slide(motion)
 
 func time(delta):
