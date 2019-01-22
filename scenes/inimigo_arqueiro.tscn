@@ -31,7 +31,7 @@ shape = SubResource( 1 )
 texture = ExtResource( 2 )
 vframes = 2
 hframes = 4
-frame = 1
+frame = 6
 _sections_unfolded = [ "Animation" ]
 __meta__ = {
 "_edit_lock_": true

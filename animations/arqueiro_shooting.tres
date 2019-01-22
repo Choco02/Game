@@ -3,7 +3,7 @@
 [resource]
 
 resource_name = "arqueiro_shooting"
-length = 0.6
+length = 1.0
 loop = true
 step = 0.1
 tracks/0/type = "value"

@@ -39,6 +39,10 @@ func atirar():
 		
 	var angulo = PI / 4 
 	var direcao_tiro = Vector2( dire * cos(angulo), - sin(angulo))
+	if get_node("anim").current_animation == "arqueiro_shooting":
+		get_node("anim").play("arqueiro_idle")
+	else:
+		get_node("anim").play("arqueiro_shooting")
 	var tiro = tiros.instance()
 	
 	
