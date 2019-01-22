@@ -19,7 +19,7 @@ func _ready():
 	pass
 
 func _process(delta):
-	rotate(0.5)
+	#rotate(0.5)
 	var movimento =  Vector2(velocidade_atualX * delta , velocidade_atualY * delta )
 	velocidade_atualY += GRAVITY
 	global_position = global_position + movimento
@@ -27,7 +27,7 @@ func _process(delta):
 	pass
 
 func set_vel(direc, speed):
-	print(direc)
+	#print(direc)
 	velocidade_atualX = direc.x * start_speed
 	velocidade_atualY = direc.y * start_speed
 	pass

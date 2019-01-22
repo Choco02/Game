@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/dragao_voador.gd" type="Script" id=1]
+[ext_resource path="res://sprites/voador_sheet.png" type="Texture" id=2]
+[ext_resource path="res://animations/voador_death.tres" type="Animation" id=3]
+[ext_resource path="res://animations/voador_idle.tres" type="Animation" id=4]
+[ext_resource path="res://animations/voador_shooting.tres" type="Animation" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 25 )
+
+[node name="dragao_voador" type="KinematicBody2D" index="0"]
+
+position = Vector2( 4, 0 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+
+position = Vector2( -1, 1 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="." index="1"]
+
+texture = ExtResource( 2 )
+vframes = 3
+hframes = 2
+_sections_unfolded = [ "Animation" ]
+
+[node name="anim" type="AnimationPlayer" parent="." index="2"]
+
+root_node = NodePath("..")
+autoplay = "voador_death"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/voador_death = ExtResource( 3 )
+anims/voador_idle = ExtResource( 4 )
+anims/voador_shooting = ExtResource( 5 )
+blend_times = [  ]
+
+
