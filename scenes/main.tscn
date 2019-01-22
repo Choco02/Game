@@ -18,7 +18,7 @@
 
 position = Vector2( 514.404, 306.972 )
 
-[node name="ininimigo1" parent="." index="1" instance=ExtResource( 2 )]
+[node name="inimigo_1" parent="." index="1" instance=ExtResource( 2 )]
 
 position = Vector2( 183.447, 129.715 )
 
@@ -1318,9 +1318,34 @@ bus = "Master"
 position = Vector2( 1355.3, 161.52 )
 scale = Vector2( 2.93372, 2.48664 )
 
-[node name="inimigo_dragao" parent="." index="7" instance=ExtResource( 11 )]
+[node name="dragao_voador2" parent="." index="7" instance=ExtResource( 10 )]
+
+position = Vector2( 5106.75, -207.072 )
+scale = Vector2( 2.93372, 2.48664 )
+
+[node name="dragao_voador3" parent="." index="8" instance=ExtResource( 10 )]
+
+position = Vector2( 8628.84, 415.439 )
+scale = Vector2( 2.93372, 2.48664 )
+
+[node name="inimigo_dragao" parent="." index="9" instance=ExtResource( 11 )]
 
 position = Vector2( 1296.2, 389.613 )
 scale = Vector2( 1.82262, 1.91608 )
+
+[node name="inimigo_dragao2" parent="." index="10" instance=ExtResource( 11 )]
+
+position = Vector2( 3223.16, 396.648 )
+scale = Vector2( 1.82262, 1.91608 )
+
+[node name="inimigo_dragao3" parent="." index="11" instance=ExtResource( 11 )]
+
+position = Vector2( 7872.49, -231.288 )
+scale = Vector2( 1.82262, 1.91608 )
+
+[node name="inimigo_dragao4" parent="." index="12" instance=ExtResource( 11 )]
+
+position = Vector2( 10041.3, 425.099 )
+scale = Vector2( 5.55913, 5.91895 )
 
 

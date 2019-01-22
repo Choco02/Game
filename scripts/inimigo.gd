@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 const GRAVITY = 100
 const DISTANCIA = 2000
+var dist_total = 0
 var motion = Vector2()
 var andar = 100
 var ativado = 0
