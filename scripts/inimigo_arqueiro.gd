@@ -2,6 +2,8 @@ extends KinematicBody2D
 
 const GRAVITY = 30
 var motion = Vector2()
+var hp = 1
+const STARTSPEED = 500
 
 func _ready():
 
@@ -25,3 +27,8 @@ func atirar():
 	var direcao_tiro = Vector2()
 	
 	pass
+	
+func damage(dano):
+	hp -= dano
+	if hp <= 0 : 
+		queue_free()

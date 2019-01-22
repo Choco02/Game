@@ -12,7 +12,7 @@
 [ext_resource path="res://scenes/dragao_voador.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/inimigo.tscn" type="PackedScene" id=11]
 
-[node name="main" type="Node" index="0"]
+[node name="main" type="Node"]
 
 [node name="player" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -1311,6 +1311,8 @@ bus = "Master"
 
 [node name="inimigos" type="Node" parent="." index="5"]
 
+editor/display_folded = true
+
 [node name="inimigo_dragao4" parent="inimigos" index="0" instance=ExtResource( 9 )]
 
 position = Vector2( 10041.3, 425.099 )
@@ -1323,7 +1325,7 @@ scale = Vector2( 1.82262, 1.91608 )
 
 [node name="inimigo_dragao" parent="inimigos" index="2" instance=ExtResource( 9 )]
 
-position = Vector2( 1296.2, 389.613 )
+position = Vector2( 1066.77, 388.102 )
 scale = Vector2( 1.82262, 1.91608 )
 
 [node name="inimigo_dragao2" parent="inimigos" index="3" instance=ExtResource( 9 )]
@@ -1343,11 +1345,11 @@ scale = Vector2( 2.93372, 2.48664 )
 
 [node name="dragao_voador" parent="inimigos" index="6" instance=ExtResource( 10 )]
 
-position = Vector2( 1355.3, 161.52 )
+position = Vector2( 1086.55, 156.828 )
 scale = Vector2( 2.93372, 2.48664 )
 
 [node name="inimigo_1" parent="inimigos" index="7" instance=ExtResource( 11 )]
 
-position = Vector2( 183.447, 129.715 )
+position = Vector2( 54.6555, 140.381 )
 
 

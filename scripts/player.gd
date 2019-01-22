@@ -3,8 +3,9 @@ extends KinematicBody2D
 onready var tiro = preload("res://scenes/tiro.tscn")
 
 signal dead(morto)
+signal hp_change(new_hp)
 
-var hp = 2
+var hp = 3
 
 const SPEED = 300
 const GRAVITY = 27
@@ -93,6 +94,7 @@ func _move(delta):
 	# essa fção é chamada quando o jogador toca esse inimigo 
 func dano_ao_player(dano_do_inimigo):
 	hp -= dano_do_inimigo
+	emit_signal("hp_change", hp ) 
 	if hp <= 0 :
 		emit_signal("dead", true)
 		queue_free()
