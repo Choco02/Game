@@ -1,7 +1,7 @@
 extends Node2D
 
 # esssa gravidade ainda deve ser ajustada
-const GRAVITY = 30
+const GRAVITY = 5
 const STARTSPEED = 500
 var dano = 1
 var direcao = Vector2()
@@ -18,11 +18,11 @@ func _process(delta):
 	if velocidade.x > 0 :
 		get_node('Sprite').set_flip_h(true)
 	else:
-		get_node('Sprite').set_flip_x(false)
+		get_node('Sprite').set_flip_h(false)
 		
 	# faz o processamento em si 
-	global_position = global_position + delta * velociade
-	velocidade.y += GRAVITY * delta
+	global_position = global_position + delta * velocidade
+	velocidade.y += GRAVITY 
 	pass
 	
 func definir_velocidade():

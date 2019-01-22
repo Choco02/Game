@@ -10,9 +10,9 @@
 [ext_resource path="res://sounds/stage_1_music.ogg" type="AudioStream" id=8]
 [ext_resource path="res://scenes/inimigo_dragao.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/dragao_voador.tscn" type="PackedScene" id=10]
-[ext_resource path="res://scenes/inimigo.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/inimigo_arqueiro.tscn" type="PackedScene" id=11]
 
-[node name="main" type="Node"]
+[node name="main" type="Node" index="0"]
 
 [node name="player" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -1311,8 +1311,6 @@ bus = "Master"
 
 [node name="inimigos" type="Node" parent="." index="5"]
 
-editor/display_folded = true
-
 [node name="inimigo_dragao4" parent="inimigos" index="0" instance=ExtResource( 9 )]
 
 position = Vector2( 10041.3, 425.099 )
@@ -1325,7 +1323,7 @@ scale = Vector2( 1.82262, 1.91608 )
 
 [node name="inimigo_dragao" parent="inimigos" index="2" instance=ExtResource( 9 )]
 
-position = Vector2( 1066.77, 388.102 )
+position = Vector2( 2444.45, 394.546 )
 scale = Vector2( 1.82262, 1.91608 )
 
 [node name="inimigo_dragao2" parent="inimigos" index="3" instance=ExtResource( 9 )]
@@ -1345,11 +1343,12 @@ scale = Vector2( 2.93372, 2.48664 )
 
 [node name="dragao_voador" parent="inimigos" index="6" instance=ExtResource( 10 )]
 
-position = Vector2( 1086.55, 156.828 )
+position = Vector2( 917.408, 121.475 )
 scale = Vector2( 2.93372, 2.48664 )
 
-[node name="inimigo_1" parent="inimigos" index="7" instance=ExtResource( 11 )]
+[node name="inimigo_arqueiro" parent="." index="6" instance=ExtResource( 11 )]
 
-position = Vector2( 54.6555, 140.381 )
+position = Vector2( 1051.62, 384.232 )
+scale = Vector2( 1.99375, 2.14687 )
 
 

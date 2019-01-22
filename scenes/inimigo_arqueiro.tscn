@@ -10,7 +10,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 20, 31 )
 
-[node name="inimigo_arqueiro" type="KinematicBody2D"]
+[node name="inimigo_arqueiro" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -31,7 +31,7 @@ shape = SubResource( 1 )
 texture = ExtResource( 2 )
 vframes = 2
 hframes = 4
-frame = 4
+frame = 1
 _sections_unfolded = [ "Animation" ]
 __meta__ = {
 "_edit_lock_": true
