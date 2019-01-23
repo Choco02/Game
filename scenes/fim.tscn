@@ -1,6 +1,6 @@
 [gd_scene format=2]
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 [node name="Label" type="Label" parent="." index="0"]
 
@@ -28,7 +28,9 @@ LordCthulhu123
 Mojodrota
 The Moon Cow
 
-todos os sons e sprites são originais"
+todos os sons e sprites são originais
+
+Jogo feito por gente que nunca fez jogos antes"
 align = 1
 valign = 1
 percent_visible = 1.0
