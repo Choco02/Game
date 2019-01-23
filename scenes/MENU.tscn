@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scripts/MENU.gd" type="Script" id=1]
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -23,6 +23,14 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 text = "Pressione Enter para Iniciar
+
+Instruções:
+
+mouse para mirar e atirar
+AD move e espaço pula
+(pode usar as setinhas também)
+
+Boa Sorte
 "
 align = 1
 valign = 1
