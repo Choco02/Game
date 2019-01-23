@@ -13,7 +13,7 @@
 [ext_resource path="res://scenes/dragao_voador.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scenes/inimigo_arqueiro.tscn" type="PackedScene" id=12]
 
-[node name="main" type="Node"]
+[node name="main" type="Node" index="0"]
 
 script = ExtResource( 1 )
 

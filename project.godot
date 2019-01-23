@@ -10,9 +10,9 @@ config_version=3
 
 [application]
 
-config/name="Platform2D"
+config/name="Arthrow"
 run/main_scene="res://scenes/MENU.tscn"
-config/icon="res://icon.png"
+config/icon="res://sprite_t.png"
 
 [autoload]
 
