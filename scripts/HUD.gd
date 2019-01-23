@@ -10,6 +10,7 @@ func _ready():
 	get_node('dois').visible = false
 	get_node('tres').visible = true
 	get_node('morto').visible = false
+	get_node('texto').visible = false
 	pass
 
 func _on_player_hp_change(hp):
@@ -23,15 +24,18 @@ func _on_player_hp_change(hp):
 		get_node('dois').visible = true
 		get_node('tres').visible = false
 		get_node('morto').visible = false
+		get_node('texto').visible = false
 	if hp == 3 :
 		get_node('um').visible = false
 		get_node('dois').visible = false
 		get_node('tres').visible = true
 		get_node('morto').visible = false
+		get_node('texto').visible = false
 	if hp <= 0 :
 		get_node('um').visible = false
 		get_node('dois').visible = false
 		get_node('tres').visible = false
 		get_node('morto').visible = true
+		get_node('texto').visible = true
 	pass
 	

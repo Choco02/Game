@@ -6,7 +6,7 @@
 [ext_resource path="res://sprites/tres.png" type="Texture" id=4]
 [ext_resource path="res://sprites/morto.png" type="Texture" id=5]
 
-[node name="HUD" type="Node2D"]
+[node name="HUD" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -29,5 +29,27 @@ texture = ExtResource( 4 )
 
 visible = false
 texture = ExtResource( 5 )
+
+[node name="texto" type="Label" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 597.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Você morreu
+Pressione R para tentar de novo"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
 
