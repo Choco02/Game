@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scripts/main.gd" type="Script" id=1]
 [ext_resource path="res://scenes/player.tscn" type="PackedScene" id=2]
@@ -11,7 +11,6 @@
 [ext_resource path="res://sounds/stage_1_music.ogg" type="AudioStream" id=9]
 [ext_resource path="res://scenes/inimigo_dragao.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/dragao_voador.tscn" type="PackedScene" id=11]
-[ext_resource path="res://scenes/inimigo_arqueiro.tscn" type="PackedScene" id=12]
 
 [node name="main" type="Node" index="0"]
 
@@ -1358,17 +1357,7 @@ scale = Vector2( 2.93372, 2.48664 )
 position = Vector2( 7085.16, 39.5659 )
 scale = Vector2( 2.93372, 2.48664 )
 
-[node name="inimigo_arqueiro" parent="." index="6" instance=ExtResource( 12 )]
-
-position = Vector2( 1051.62, 384.232 )
-scale = Vector2( 1.99375, 2.14687 )
-
-[node name="inimigo_arqueiro2" parent="." index="7" instance=ExtResource( 12 )]
-
-position = Vector2( 3958.27, -290.909 )
-scale = Vector2( 1.99375, 2.14687 )
-
-[node name="Area2D" type="Area2D" parent="." index="8"]
+[node name="Area2D" type="Area2D" parent="." index="6"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
